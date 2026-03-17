@@ -76,7 +76,7 @@ while number > 0:
 print('Сумма цифр =', s)
 
                                                 '''FOR'''
-s = 'hello'
+s = 'hi'
 for i in s:
     print(i)
 
