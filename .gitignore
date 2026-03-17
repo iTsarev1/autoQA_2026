@@ -1,0 +1,10 @@
+user_creds.py
+__pycache__/
+.env
+venv/
+.idea/
+allure-results/
+docker-results/
+videos/
+*.db
+docs/downloads
