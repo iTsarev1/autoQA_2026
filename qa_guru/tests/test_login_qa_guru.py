@@ -2,6 +2,7 @@ from selene import (browser, be, have)
 import time
 from allure import epic, feature, story, title, description, dynamic
 from pytest import mark
+from config import config
 
 
 class TestLogin:
