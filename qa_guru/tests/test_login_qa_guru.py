@@ -2,7 +2,7 @@ from selene import (browser, be, have)
 import time
 from allure import epic, feature, story, title, description, dynamic
 from pytest import mark
-from config import config
+
 
 
 class TestLogin:
@@ -10,11 +10,11 @@ class TestLogin:
     @description("Тест проверяет успешную авторизацию")
     def test_login_qa_guru(self):
         time.sleep(1)
-        browser.open('https://school.qa.guru/')
+        browser.open('config.BASE_URL')
         time.sleep(1)
-        browser.element('[name="email"]').should(be.blank).type("yurapwnz1992@yandex.ru")
+        browser.element('[name="email"]').should(be.blank).type("USER_LOGIN")
         time.sleep(1)
-        browser.element('[name="password"]').should(be.blank).type('ProstoParol').press_enter()
+        browser.element('[name="password"]').should(be.blank).type('USER_PASSWORD').press_enter()
         time.sleep(1)
         browser.element('[class="stream-title"]').should(have.text('QA.GURU | Курс-интенсив: ChatGPT для тестировщиков'))
         #('[class="stream-title"]') можем записать проще: ('.stream-title')
