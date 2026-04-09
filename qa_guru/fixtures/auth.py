@@ -4,6 +4,10 @@ import pytest
 def browser():
     print("Браузер!")
 
+    yield
+
+    print("Закрываем Браузер!")
+
 
 @pytest.fixture
 def login_page(browser):
