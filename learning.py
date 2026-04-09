@@ -127,7 +127,7 @@ else:
 
 '''Функция continue'''
 #Позволяет совершить пропуск одной итерации цикла
-s = 'hi'
+s = 'hello'
 for i in s:
     if i == 'l':
         continue
