@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture
 def browser():
     print("Браузер!")
@@ -22,6 +23,12 @@ def user():
 
 #берем фикстуру user и добавляем ее имя в аргументы нашего теста:
 def test_login(login_page, user):
+    username, password = user
+    assert username == "username"
+    assert password == "password"
+
+
+def test_logout(login_page, user):
     username, password = user
     assert username == "username"
     assert password == "password"
