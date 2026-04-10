@@ -15,7 +15,6 @@ def user():
     return username, password
 
 #чтобы функции стали фикстурами надо импортировать pytest:
-<<<<<<< HEAD
 import pytest
 
 #Функции промаркируем специальным декоратором @pytest.fixture
@@ -23,6 +22,54 @@ import pytest
 #и этот декоратор даст функции какое-то новое поведение
 #Что мы сделали? Мы продекорировали функции, и они стали фикстурами
 #Теперь результат фикстур мы можем использовать в нашем тесте
-=======
-import pytest
->>>>>>> 8536f52cf6e003f918c635ae3b98c49f2154e5b2
+
+Итого:
+
+def browser():
+    print("Браузер!")
+
+    yield
+
+    print("Закрываем Браузер!")
+
+
+@pytest.fixture
+def login_page(browser):
+    print("Логин пейдж!")
+
+
+@pytest.fixture
+def user():
+    print("Юзер!")
+    return "username", "password"
+
+
+#берем фикстуру user и добавляем ее имя в аргументы нашего теста:
+def test_login(login_page, user):
+    username, password = user
+    assert username == "username"
+    assert password == password
+
+
+#теперь нам нужно завершение, TEARDOWN,  например, закрытие браузера
+#для этого нужно применить yield:
+@pytest.fixtures
+def browser():
+    print("Браузер!")
+
+    yield
+
+    print("Закрываем Браузер!")
+
+
+#Вопрос??? Зачем нам каждый раз закрывать браузер?
+#Нужно сделать фикстуру browser общей для какой-то группы тестов, чтобы браузер запускали 1 раз
+#Для этого в аргументе декоратора fixture указать scope:
+def browser(scope="session"):
+#scope="session" выполнится на всю сессию, на весь запуск. Все тесты будут использовать один и тот же браузер
+    print("Браузер!")
+
+    yield
+
+    print("Закрываем Браузер!")
+#Такие фикстуры надо выносить в файл conftest.py, где как раз хранятся глобальные фикстуры
