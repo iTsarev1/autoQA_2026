@@ -1,3 +1,5 @@
+###ЧИСЛА###
+
 #Математика
 import math
 
@@ -17,6 +19,7 @@ print(random.randint(0,100))
 print(random.randint(0,100))
 print(random.randint(0,100))
 print("-" * 100)
+
 
 #команда для округления(после запятой указывается кол-во знаков после запятой):
 print(round(1.33333333333, 2))
