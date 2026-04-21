@@ -42,10 +42,14 @@ print("-" * 100)
 #ИНДЕКСЫ И СЛАЙСЫ
 s = "Goodmorning world!"
 print(s[3])
+print("-" * 100)
 print(s[-3])
+print("-" * 100)
 
 print(s[0:3]) #последний, то есть 3, не включительно
+print("-" * 100)
 print(s[:3])
+print("-" * 100)
 print(s[1:3:2])
 print("-" * 100)
 
