@@ -1,10 +1,13 @@
-try:
-    x = float(input("Введите любое число: "))
-    if x > 0:
-        print("Число положительоне")
-    elif x < 0:
-        print("Число отрицательоне")
-    else:
-        print("Число равно нуля")
-except ValueError:
-    print("Вы ввели чехарду")
+for x in range(1,10):
+    for y in range(1,10):
+        print(f'{x} * {y} = {x * y}', end = ' | ')
+    print()
+
+
+
+x = int(input("Введите любое целое число: "))
+s = 0
+while x > 0:
+    s += x%10
+    x = x//10
+print("Сумма цифр введенного числа равна", s)
