@@ -3,7 +3,11 @@ for i in range(10):
 print('-' * 100)
 
 
-
+for i in range(1, 7):
+    if i == 5:
+        break
+    print(i)
+print('-' * 100)
 
 
 for x in range(1,10):
