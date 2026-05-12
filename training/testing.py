@@ -28,12 +28,20 @@ print(x, number)
 
 #Циклы
 
-'''Таблица умножения'''
-x = y = 1
-while x < 10:
-    while y < 10:
-        print(x, '*', y, '=', x * y, end=' | ')
-        y += 1
-    print()
-    y = 1
-    x +=1
+# '''Таблица умножения'''
+# x = y = 1
+# while x < 10:
+#     while y < 10:
+#         print(x, '*', y, '=', x * y, end=' | ')
+#         y += 1
+#     print()
+#     y = 1
+#     x +=1
+
+'''Посчитать сумму цифр введенного числа'''
+number = int(input("Введите целое число: "))
+s = 0
+while number > 0:
+    s += number % 10
+    number //=10
+print("Сумма цифр равна:", s)
