@@ -38,10 +38,27 @@ print(x, number)
 #     y = 1
 #     x +=1
 
-'''Посчитать сумму цифр введенного числа'''
-number = int(input("Введите целое число: "))
-s = 0
-while number > 0:
-    s += number % 10
-    number //=10
-print("Сумма цифр равна:", s)
+# '''Посчитать сумму цифр введенного числа'''
+# number = int(input("Введите целое число: "))
+# s = 0
+# while number > 0:
+#     s += number % 10
+#     number //=10
+# print("Сумма цифр равна:", s)
+
+'''FOR'''
+for i in 1,2,"3три", "Четыре":
+        print(i)
+print('-' * 100)
+
+s = "hello"
+for i in s:
+    print(i)
+print('-' * 100)
+
+for i in range(1, 10, 2):
+    print(i)
+print('-' * 100)
+
+for i in range(10, 1, -1):
+    print(i)
