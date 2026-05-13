@@ -91,3 +91,9 @@ for i in range(20):
     print(i)
 print('-' * 100)
 
+'''Функция continue'''
+s = 'hello'
+for i in s:
+    if i == 'l':
+        continue
+    print(i)
