@@ -70,3 +70,30 @@ for x in range(1, 10):
         print(f'{x} * {y} = {x * y}', end=' | ')
     print()
 print('-' * 100)
+
+'''Функция enumerate'''
+s = 'hello'
+for i in enumerate(s, 55):
+    print(i)
+print('-' * 100)
+
+'''Функция break'''
+s = 'hello'
+for i in s:
+    if i == 'l':
+        break
+    print(i)
+print('-' * 100)
+
+for i in range(20):
+    if i == 11:
+        break
+    print(i)
+print('-' * 100)
+
+'''Функция continue'''
+s = 'hello'
+for i in s:
+    if i == 'l':
+        continue
+    print(i)
