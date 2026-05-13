@@ -13,7 +13,7 @@ print("-" * 100)
 import random
 
 #Строка, чтобы рандомные числа оставались одни и те же, и мы с ними прогоняли тесты:
-random.seed("56h4h3h")
+random.seed("")
 
 print(random.randint(0,100))
 print(random.randint(0,100))
