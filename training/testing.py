@@ -85,3 +85,9 @@ for i in s:
     print(i)
 print('-' * 100)
 
+for i in range(20):
+    if i == 11:
+        break
+    print(i)
+print('-' * 100)
+
