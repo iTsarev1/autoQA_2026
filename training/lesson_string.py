@@ -71,3 +71,25 @@ print("-" * 100)
 s = "Hello, world! And me, and you"
 print(s.split(','))
 print("-" * 100)
+
+#3. Ограничение количества разделений:
+s = "one,two,three,four,five,six"
+print(s.split(',', 2))
+print("-" * 100)
+
+#ФОРМАТИРОВАНИЕ
+a = "Hello"
+b = "World"
+print(a + b)
+print("-" * 100)
+
+print(a + ', ' + b + '!')
+print("-" * 100)
+
+#для упрощения слияния применим f-строку:
+print(f'{a}, {b}!')
+print("-" * 100)
+
+#так же внутри f-строки можно исполльзовать функцию:
+print(f'{a}, {b.upper()}!')
+print("-" * 100)
