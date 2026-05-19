@@ -21,14 +21,47 @@ d = {
 
 user_1 = {
     "name": "Uve",
-    "age": 57
+    "age": 57,
+    "id": "001"
 }
 
 user_2 = {
     "name": "Otto",
-    "age": 67
+    "age": 67,
+    "id": "002"
+}
+
+users = {
+    "001": user_1,
+    "002": user_2
 }
 
 print(user_1["name"])
 print("-" * 100)
 print(user_2["name"])
+print("-" * 100)
+print(users["001"])
+print("-" * 100)
+
+
+#МЕТОДЫ:
+
+# вернуть пары "ключ-значение":
+print(users.items())
+print("-" * 100)
+
+#вернуть все значения:
+print(users.values())
+print("-" * 100)
+
+#  вернуть все ключи:
+print(users.keys())
+print("-" * 100)
+
+# получить элемент по id:
+print(users.get("001"))
+print("-" * 100)
+
+# переопределить значение. так как неупорядоченная коллекция, то обращаемся по ключу, а не индексу:
+users["002"] = {"name": "NE Uve", "age": "not 57"}
+print(users["002"])
