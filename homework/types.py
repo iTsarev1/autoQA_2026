@@ -5,7 +5,7 @@ def test_greeting():
     name = "Анна"
     age = 25
     # TODO Сформируйте нужную строку
-    output = ""
+    output = 'Привет, ' + name + '! ' + 'Тебе ' + str(age) + ' лет.'
 
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
