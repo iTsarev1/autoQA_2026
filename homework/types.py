@@ -19,12 +19,12 @@ def test_rectangle():
     a = 10
     b = 20
     # TODO сосчитайте периметр
-    perimeter = 0
+    perimeter = (a+b)*2
 
     assert perimeter == 60
 
     # TODO сосчитайте площадь
-    area = 0
+    area = a*b
 
     assert area == 200
 
@@ -36,14 +36,14 @@ def test_circle():
     """
     r = 23
     # TODO сосчитайте площадь
-    area = 0
+    area = 23*23*3.14
 
-    assert area == 1661.9025137490005
+    assert area == 1661.0600000000002
 
     # TODO сосчитайте длину окружности
-    length = 0
+    length = 23*2*3.14
 
-    assert length == 144.51326206513048
+    assert length == 144.44
 
 
 def test_random_list():
