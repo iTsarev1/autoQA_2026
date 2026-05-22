@@ -44,3 +44,16 @@ def test_circle():
     length = 23*2*3.14
 
     assert length == 144.44
+
+
+def test_random_list():
+    """
+    Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
+    """
+    # TODO создайте список
+    l = []
+    for l in range(1, 101, 10):
+        return l
+
+    assert len(l) == 10
+    assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
