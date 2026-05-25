@@ -99,9 +99,19 @@ def test_dicts():
     first = ["a", "b", "c", "d", "e"]
     second = [1, 2, 3, 4, 5]
     # TODO создайте словарь
-    d = {}
+    d = dict(zip(first, second))
 
     assert isinstance(d, dict)
     assert len(d) == 5
     assert list(d.keys()) == first
     assert list(d.values()) == second
+
+
+# Часто zip() используют для создания словарей, когда ключи и значения находятся в отдельных списках или других итерациях
+# Пример:
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
+# Создание словаря с помощью zip()
+my_dict = dict(zip(keys, values))
+print(my_dict)
+# Output: {'name': 'Alice', 'age': 30, 'city': 'New York'}
