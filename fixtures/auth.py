@@ -34,5 +34,5 @@ def setup_browser():
     yield
     # В конце теста очищаем состояние браузера
     # browser.element('[logout-button]').click()  # Пример выхода из аккаунта
-    # Или очистка cookies
-    browser.driver.delete_all_cookies()
+    # Или очистка cookies browser.driver.delete_all_cookies()
+    browser.quit() # закрывает браузер в конце каждого теста, чтобы тесты были независимы друг от друга
