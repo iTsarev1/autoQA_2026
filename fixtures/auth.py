@@ -28,6 +28,7 @@ def test_logout(login_page, user):
 
 
 @pytest.fixture(scope="function")  # scope="function" для каждого теста
+                                   # autouse=True - можно прописать, и тогда не надо будет в каждом тесте в аргументе указывать
 def setup_browser():
     browser.config.base_url = config.BASE_URL
     browser.open(config.BASE_URL)  # Открываем браузер один раз для всех тестов
