@@ -1,0 +1,124 @@
+1779972045931	geckodriver	INFO	Listening on 127.0.0.1:54549
+1779972046474	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofileP7yHJH"
+Dynamically enable window occlusion 0
+1779972047574	Marionette	INFO	Marionette enabled
+1779972047733	Marionette	INFO	Listening on port 50557
+WebDriver BiDi listening on ws://127.0.0.1:54550
+Read port: 50557
+1779972047936	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+JavaScript warning: https://school.qa.guru/nassets/3c8b9146/jquery-ui.min.js?v=1765633902, line 12: unreachable code after return statement
+JavaScript warning: https://school.qa.guru/nassets/69e6d7ba/js/audio-comments.js?v=1777898469, line 17: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://school.qa.guru."
+1779972057838	Marionette	INFO	Stopped listening on port 50557
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+1779972059498	geckodriver	INFO	Listening on 127.0.0.1:62658
+1779972059997	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofile9fu0JU"
+Dynamically enable window occlusion 0
+1779972060561	Marionette	INFO	Marionette enabled
+1779972060741	Marionette	INFO	Listening on port 58765
+Read port: 58765
+WebDriver BiDi listening on ws://127.0.0.1:62659
+1779972060819	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1779972064823	Marionette	INFO	Stopped listening on port 58765
+console.error: RSLoader: 
+  Failed to retrieve recipes from Remote Settings
+  Message: Error: Could not sync nimbus-secure-experiments: get-exception
+  Stack:
+    RemoteSettingsSyncError@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1414:5
+getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:681:13
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:587:17
+
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/UrlClassifierListManager.sys.mjs, line 465: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1779972085912	geckodriver	INFO	Listening on 127.0.0.1:51534
+1779972086446	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofile9rk0Go"
+Dynamically enable window occlusion 0
+1779972087018	Marionette	INFO	Marionette enabled
+1779972087170	Marionette	INFO	Listening on port 55151
+WebDriver BiDi listening on ws://127.0.0.1:51535
+Read port: 55151
+1779972087309	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+1779972091384	Marionette	INFO	Stopped listening on port 55151
+console.error: (new Error("Unable to arm timer, the object has been finalized.", "resource://gre/modules/DeferredTask.sys.mjs", 279))
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/UrlClassifierListManager.sys.mjs, line 465: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1779972164811	geckodriver	INFO	Listening on 127.0.0.1:57129
+1779972165348	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofiledC83HW"
+Dynamically enable window occlusion 0
+1779972165891	Marionette	INFO	Marionette enabled
+1779972166039	Marionette	INFO	Listening on port 50753
+WebDriver BiDi listening on ws://127.0.0.1:57130
+Read port: 50753
+1779972166189	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+1779972170528	Marionette	INFO	Stopped listening on port 50753
+console.error: (new Error("Unable to arm timer, the object has been finalized.", "resource://gre/modules/DeferredTask.sys.mjs", 279))
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/UrlClassifierListManager.sys.mjs, line 465: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1779972406161	geckodriver	INFO	Listening on 127.0.0.1:62143
+1779972406672	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofileRZfLrb"
+Dynamically enable window occlusion 0
+1779972407257	Marionette	INFO	Marionette enabled
+1779972407432	Marionette	INFO	Listening on port 55807
+WebDriver BiDi listening on ws://127.0.0.1:62144
+Read port: 55807
+1779972407656	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+JavaScript warning: https://school.qa.guru/nassets/3c8b9146/jquery-ui.min.js?v=1765633902, line 12: unreachable code after return statement
+JavaScript warning: https://school.qa.guru/nassets/69e6d7ba/js/audio-comments.js?v=1777898469, line 17: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://school.qa.guru."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://school.qa.guru."
+JavaScript warning: https://school.qa.guru/nassets/3c8b9146/jquery-ui.min.js?v=1765633902, line 12: unreachable code after return statement
+JavaScript warning: https://school.qa.guru/nassets/69e6d7ba/js/audio-comments.js?v=1777898469, line 17: unreachable code after return statement
+1779972416678	Marionette	INFO	Stopped listening on port 55807
+JavaScript warning: https://remake-proxy.ru/pl/layout/00000/41/training-scripts.js, line 36: Script terminated by timeout at:
+loadTrainingScripts/</t_check<@https://remake-proxy.ru/pl/layout/00000/41/training-scripts.js:36:7
+
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+1779972418558	geckodriver	INFO	Listening on 127.0.0.1:52734
+1779972419101	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofileuxab2x"
+Dynamically enable window occlusion 0
+1779972419687	Marionette	INFO	Marionette enabled
+1779972419850	Marionette	INFO	Listening on port 57111
+WebDriver BiDi listening on ws://127.0.0.1:52735
+Read port: 57111
+1779972420079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+JavaScript warning: https://school.qa.guru/nassets/3c8b9146/jquery-ui.min.js?v=1765633902, line 12: unreachable code after return statement
+JavaScript warning: https://school.qa.guru/nassets/69e6d7ba/js/audio-comments.js?v=1777898469, line 17: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://school.qa.guru."
+1779972426863	Marionette	INFO	Stopped listening on port 57111
+JavaScript warning: https://remake-proxy.ru/pl/layout/00000/1/script.js, line 436: Script terminated by timeout at:
+interv<@https://remake-proxy.ru/pl/layout/00000/1/script.js:436:12
+
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+1779972428595	geckodriver	INFO	Listening on 127.0.0.1:52353
+1779972429117	mozrunner::runner	INFO	Running command: "C:\\Users\\i.tsarev\\.cache\\selenium\\firefox\\win64\\151.0.2\\firefox.exe" "--marionette" "--remote-debug ... remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\I1466~1.TSA\\AppData\\Local\\Temp\\rust_mozprofileQbtFiS"
+Dynamically enable window occlusion 0
+1779972429695	Marionette	INFO	Marionette enabled
+1779972429852	Marionette	INFO	Listening on port 49358
+WebDriver BiDi listening on ws://127.0.0.1:52354
+Read port: 49358
+1779972429972	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+JavaScript warning: https://school.qa.guru/nassets/3c8b9146/jquery-ui.min.js?v=1765633902, line 12: unreachable code after return statement
+JavaScript warning: https://school.qa.guru/nassets/69e6d7ba/js/audio-comments.js?v=1777898469, line 17: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://school.qa.guru."
+1779972438101	Marionette	INFO	Stopped listening on port 49358
+console.error: AboutNewTabResourceMapping: "train-hop add-on install failure: Error: Unexpected download cancelled while downloading xpi from https://archive.mozilla.org/pub/system-addons/newtab/newtab-152.3.0-build1/newtab.xpi"
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1

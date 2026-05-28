@@ -3,7 +3,7 @@ import time
 from allure import epic, feature, story, title, description, dynamic
 from pytest import mark
 from config import config
-from fixtures.auth import setup_browser
+from fixtures.page import setup_browser
 
 
 
@@ -34,8 +34,3 @@ class TestLogin:
         time.sleep(1)
         browser.element('[name="password"]').press_enter()
         browser.element('.btn-error').should(have.text('Не заполнено поле Пароль'))
-
-
-
-
-
