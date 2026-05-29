@@ -6,12 +6,10 @@ from config import config
 from fixtures.page import setup_browser
 
 
-
 class TestLogin:
     @story("Авторизация на QA Guru")
     @description("Тест проверяет успешную авторизацию")
     def test_login_qa_guru(self, setup_browser):
-        # browser.open(config.BASE_URL)
         browser.element('[name="email"]').should(be.blank).type(config.USER_LOGIN)
         browser.element('[name="password"]').should(be.blank).type(config.USER_PASSWORD).press_enter()
         browser.element('[class="stream-title"]').should(have.text('QA.GURU | Курс-интенсив: ChatGPT для тестировщиков'))
@@ -29,8 +27,6 @@ class TestLogin:
     @story("Авторизация на QA Guru")
     @description("Тест проверяет вывод Не заполнено поле Пароль при не заполненном пароле")
     def test_empty_password(self, setup_browser):
-        time.sleep(1)
         browser.element('[name="email"]').should(be.blank).type(config.USER_LOGIN)
-        time.sleep(1)
         browser.element('[name="password"]').press_enter()
         browser.element('.btn-error').should(have.text('Не заполнено поле Пароль'))
