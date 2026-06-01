@@ -12,12 +12,10 @@ from config import config
 
 
 @pytest.fixture(scope="function")  # scope="function" для каждого теста
-                                   # autouse=True - можно прописать, и тогда не надо будет в каждом тесте в аргументе указывать
+                                   # autouse = True - можно прописать, и тогда не надо будет в каждом тесте в аргументе указывать
 def setup_browser():
-    headless = True  # Поменяй на False, чтобы открыть браузер
-
-    options = webdriver.ChromeOptions()
-    options.headless = headless
+    options = webdriver.ChromeOptions() #Создаём объект ChromeOptions, который позволяет настраивать параметры Chrome
+    options.headless = True # Поменяй на False, чтобы открыть браузер
 
     browser.config.driver = webdriver.Chrome(options=options)
     browser.config.base_url = config.BASE_URL
