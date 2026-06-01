@@ -17,8 +17,9 @@ def setup_browser():
     options = webdriver.ChromeOptions() #Создаём объект ChromeOptions, который позволяет настраивать параметры Chrome
     options.headless = True # Поменяй на False, чтобы открыть браузер
 
-    browser.config.driver = webdriver.Chrome(options=options)
-    browser.config.base_url = config.BASE_URL
+    browser.config.driver = webdriver.Chrome(options=options) # Запускает браузер Chrome с переданными опциями, cвязывает Selene с драйвером браузера
+                                                              # options=options передаёт настройки браузера (в нашем случае — headless режим)
+    browser.config.base_url = config.BASE_URL # Устанавливает базовый URL для браузера Selene
     # browser.config.driver_options = webdriver.FirefoxOptions() # Чтобы принудительно открыть в Firefox, а не Chrome
     browser.open(config.BASE_URL)  # Открываем браузер один раз для всех тестов
 
