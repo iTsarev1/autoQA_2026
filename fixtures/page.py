@@ -24,5 +24,5 @@ def setup_browser():
     browser.open(config.BASE_URL)  # Открываем браузер один раз для всех тестов
 
     yield
-    # В конце теста очищаем состояние браузера. очистка cookies browser.driver.delete_all_cookies()
+    # Чтобы в конце теста очистить состояние браузера - очистка cookies browser.driver.delete_all_cookies()
     browser.quit() # закрывает браузер в конце каждого теста, чтобы тесты были независимы друг от друга
