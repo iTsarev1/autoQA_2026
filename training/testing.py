@@ -34,11 +34,30 @@ while x < 10:
 print('-'*50)
 
 
-'''Посчитать сумму цифр введенного числа'''
-number = int(input("Введите целое число: "))
-s = 0
-while number > 0:
-    s += number %10
-    number//=10
-print(s)
+# '''Посчитать сумму цифр введенного числа'''
+# number = int(input("Введите целое число: "))
+# s = 0
+# while number > 0:
+#     s += number %10
+#     number//=10
+# print(s)
+# print('-'*50)
+
+
+s = [1,2,3,4,5,6]
+for i in s:
+    print(i)
+print('-'*50)
+
+s = [1,2,3,4,5,6], 1, "hello"
+for i in s:
+        print(i)
+print('-'*50)
+
+for i in range(1, 5):
+    print(i)
+print('-'*50)
+
+for i in range(5, 0, -1):
+    print(i)
 print('-'*50)
