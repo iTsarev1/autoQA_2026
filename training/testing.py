@@ -68,3 +68,10 @@ for x in range(1, 10):
        print(f'{x} * {y} = {x * y}', end=' | ')
     print()
 print('-'*50)
+
+
+'''enumerate'''
+s = 'hello'
+for i in enumerate(s, -1):
+    print(i)
+
