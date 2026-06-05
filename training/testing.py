@@ -61,3 +61,10 @@ print('-'*50)
 for i in range(5, 0, -1):
     print(i)
 print('-'*50)
+
+
+for x in range(1, 10):
+    for y in range(1, 10):
+       print(f'{x} * {y} = {x * y}', end=' | ')
+    print()
+print('-'*50)
