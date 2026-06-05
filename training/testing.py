@@ -74,4 +74,26 @@ print('-'*50)
 s = 'hello'
 for i in enumerate(s, -1):
     print(i)
+print('-' * 50)
+
+'''break'''
+s = 1, 2, 3, 4, 5, 6, 7
+for i in s:
+    if i == 5:
+        break
+    print(i)
+print('-' * 50)
+
+'''continue'''
+for i in range(1, 10):
+    if i == 5:
+        continue
+    print(i)
+print('-' * 50)
+
+s = 'hello'
+for i in s:
+    if i == "l":
+        continue
+    print(i)
 
