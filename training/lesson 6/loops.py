@@ -24,3 +24,18 @@ print('-' * 100)
 
 
 # Цикл for - используется для того, чтобы итерироваться по каким-либо коллекциям, спискам, словарям, строкам
+
+
+users = [
+    {"name": "Ilya", "age": 32},
+    {"name": "Elena", "age": 22},
+    {"name": "Dmitriy", "age": 5},
+    {"name": "Ulyana", "age": 3},
+    {"name": "Irina", "age": 24}
+]
+
+
+from pprint import pprint
+
+for user in users:
+    pprint(user)
