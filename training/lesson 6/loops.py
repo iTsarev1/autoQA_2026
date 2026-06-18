@@ -1,5 +1,5 @@
 import random
-
+from os import name
 
 # while - цикл с предусловием
 # пример: пока пользователь не введет правильный номер, ...
@@ -26,6 +26,7 @@ print('-' * 100)
 # Цикл for - используется для того, чтобы итерироваться по каким-либо коллекциям, спискам, словарям, строкам
 
 
+# Итерируем списки
 users = [
     {"name": "Ilya", "age": 32},
     {"name": "Elena", "age": 22},
@@ -38,4 +39,7 @@ users = [
 from pprint import pprint
 
 for user in users:
-    pprint(user)
+    pprint(f"Пользователю {user['name']} {user['age']} лет")
+
+
+# Итерируем словари
