@@ -53,3 +53,16 @@ d = {
 for item in d:
     pprint(item)
 print('-' * 100)
+# эта строка идентична строке ниже:
+for item in d.keys(): # Возвращает ключи
+    pprint(item)
+print('-' * 100)
+
+
+for item in d.values(): # Возвращает значение
+    pprint(item)
+print('-' * 100)
+
+for item in d.items(): # Возвращает пары в виде кортежей
+    pprint(item)
+print('-' * 100)
