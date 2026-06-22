@@ -30,9 +30,9 @@ print('-' * 100)
 users = [
     {"name": "Ilya", "age": 32},
     {"name": "Elena", "age": 22},
-    {"name": "Dmitriy", "age": 5},
-    {"name": "Ulyana", "age": 3},
-    {"name": "Irina", "age": 24}
+    {"name": "Vasya", "age": 5},
+    {"name": "Petya", "age": 3},
+    {"name": "Klava", "age": 24}
 ]
 
 
@@ -40,6 +40,16 @@ from pprint import pprint
 
 for user in users:
     pprint(f"Пользователю {user['name']} {user['age']} лет")
+print('-' * 100)
 
 
 # Итерируем словари
+
+d = {
+    "first": 1,
+    "second": 2,
+    "third": 3
+}
+for item in d:
+    pprint(item)
+print('-' * 100)
