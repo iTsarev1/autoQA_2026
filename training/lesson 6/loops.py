@@ -78,7 +78,19 @@ print('-' * 100)
 iteration_count = 10
 for i in range(3, iteration_count, 2):
     print(f"Текущая итерация: {i}")
+print('-' * 100)
 
 iteration_count = 10
 for i in range(iteration_count, 3, -1):
     print(f"Текущая итерация: {i}")
+print('-' * 100)
+
+
+# break, continue, else - прерывание цикла
+
+s = 10
+for i in range(s):
+    if i % 2 == 0:
+        continue
+    print(f"Точно четное число: {i}")
+print('-' * 100)
