@@ -70,3 +70,11 @@ print('-' * 100)
 for (key, value) in d.items():
     pprint(f"Ключ: {key}, Значение: {value}")
 print('-' * 100)
+
+
+
+# RANGE
+
+iteration_count = 10
+for i in range(3, iteration_count, 2):
+    print(f"Текущая итерация: {i}")
