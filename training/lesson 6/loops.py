@@ -94,3 +94,18 @@ for i in range(s):
         continue
     print(f"Точно четное число: {i}")
 print('-' * 100)
+
+
+# enumerate
+
+cities = ["ЕКТБ", "Москва", "Челябинск"]
+i = 1
+for city in cities:
+    print(f"{city} на {i} месте по загрязнению воздуха")
+    i += 1
+print('-' * 100)
+
+
+cities = ["ЕКТБ", "Москва", "Челябинск"]
+for j, city in enumerate(cities, 1):
+    print(f"{city} на {j} месте по загрязнению воздуха")
