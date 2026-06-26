@@ -13,3 +13,11 @@ sum_numbers(12, 3)
 sum_numbers(0, 53)
 sum_numbers(-43234234.234, 3)
 print('-' * 100)
+
+
+# Возвращаем значение
+def sum(a, b): # noqa
+    return a + b
+
+n = sum(1, 53)
+print(n)
