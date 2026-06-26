@@ -111,7 +111,3 @@ for j, city in enumerate(cities, 1):
     print(f"{city} на {j} месте по загрязнению воздуха")
 
 
-cities = ["ЕКТБ", "Москва", "Челябинск"]
-for city, j in enumerate(cities, 1):
-    print(f"{city} на {j} месте")
-# получиться чушь
