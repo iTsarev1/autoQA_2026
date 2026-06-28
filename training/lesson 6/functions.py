@@ -21,3 +21,12 @@ def sum(a, b): # noqa
 
 n = sum(1, 53)
 print(n)
+print('-' * 100)
+
+
+# Функция с именованными аргументами
+def sum_new(a, b):
+    print(a + b)
+
+sum_new(a=10, b=20)
+sum_new(b=10, a=20)
