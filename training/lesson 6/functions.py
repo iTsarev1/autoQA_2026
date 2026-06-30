@@ -3,6 +3,7 @@
 # 1.Избегать повторения кода.
 # 2.Делать код более читаемым.
 # 3.Упрощать поддержку и расширение программы.
+from selenium.webdriver.common.devtools.v85.tracing import end
 
 
 # Функция с позиционными аргументами
@@ -100,3 +101,11 @@ custom_named_print(name= "Илья", age= "20", city= "Казань")
 # Мы передали 3 ключевых аргумента.
 # Python собрал их в словарь kwargs = {"name": "Илья", "age": 20, "city": "Казань"}.
 # Внутри функции мы получили доступ к этим параметрам через словарь
+
+
+# Смешанное использование *args и **kwargs
+def custom_named_print2(*args, **kwargs):
+    print(args, kwargs)
+    print(*args, **kwargs)
+
+custom_named_print2(1, 2, 3, 4, 5, end = "!\n", sep= " | ")
