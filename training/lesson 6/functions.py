@@ -145,3 +145,14 @@ def foo():
 foo()
 print(x)
 print('-' * 100)
+
+
+# Функция - тоже объект
+
+users = [
+    {"name": "Oleg", "age": 18},
+    {"name": "Stepan", "age": 58},
+    {"name": "Natalya", "age": 28},
+    {"name": "Grisha", "age": 21},
+    {"name": "Anna", "age": 109}
+]
