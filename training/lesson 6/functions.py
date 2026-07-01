@@ -167,3 +167,6 @@ pprint(users)
 print('-' * 100)
 
 
+# Анонимная ф-ция для более лаконичного кода:
+users.sort(key = lambda user: user["age"])
+pprint(users)
