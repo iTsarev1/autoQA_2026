@@ -115,6 +115,16 @@ def test_find_suitable_user():
     ]
 
 
+# Сделайте функцию, которая будет печатать
+# читаемое имя переданной ей функции и значений аргументов.
+# Вызовите ее внутри функций, описанных ниже
+# Подсказка: Имя функции можно получить с помощью func.__name__
+# Например, вызов следующей функции должен преобразовать имя функции
+# в более читаемый вариант (заменить символ подчеркивания на пробел,
+# сделать буквы заглавными (или первую букву), затем вывести значения всех аргументов этой функции:
+# >>> open_browser(browser_name="Chrome")
+# "Open Browser [Chrome]"
+
 def test_readable_function():
     open_browser(browser_name="Chrome")
     go_to_companyname_homepage(page_url="https://companyname.com")
@@ -122,7 +132,13 @@ def test_readable_function():
 
 
 def open_browser(browser_name):
-    actual_result = None
+    # 1. Берем СТРОКУ с именем функции через .__name__ и сразу применяем к нему цепочку изменений
+    actual_result = open_browser.__name__.replace("_", " ").title()
+    # replace("_", " ") Меняет подчеркивание на пробел
+    # title() делает большие первые буквы КАЖДОГО слова ("Open Browser"),а .capitalize() только самой первой буквы ("Open browser")
+
+    actual_result = f"{actual_result} [{browser_name}]"
+    print(actual_result)
     assert actual_result == "Open Browser [Chrome]"
 
 
