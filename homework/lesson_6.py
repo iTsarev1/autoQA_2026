@@ -143,7 +143,8 @@ def open_browser(browser_name):
 
 
 def go_to_companyname_homepage(page_url):
-    actual_result = None
+    actual_result = go_to_companyname_homepage.__name__.replace("_", " ").title()
+    actual_result = f"{actual_result} [{page_url}]"
     assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
 
 
