@@ -19,4 +19,3 @@ browser.config.driver = driver
 # def test_download():
 browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst")
 browser.element("[data-testid='download-raw-button']").click()
-time.sleep(5)
