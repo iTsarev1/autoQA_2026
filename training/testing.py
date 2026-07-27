@@ -28,4 +28,17 @@ users = [
 
 for user in users:
     pprint(f"Пользователю {user['name']} {user['age']} лет")
+print('-' * 100)
 
+
+d = {
+    "first": 1,
+    "second": 2,
+    "third": 3
+}
+for item in d:
+    pprint(item)
+print('-' * 100)
+
+for item in d.keys():
+    pprint(item)
