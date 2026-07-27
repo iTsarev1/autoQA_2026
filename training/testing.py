@@ -43,3 +43,7 @@ print('-' * 100)
 for item in d.keys():
     pprint(item)
 print('-' * 100)
+
+for item in d.values():
+    pprint(item)
+print('-' * 100)
