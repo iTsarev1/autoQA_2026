@@ -51,3 +51,7 @@ print('-' * 100)
 for item in d.items():
     pprint(item)
 print('-' * 100)
+
+for (key, value) in d.items():
+    pprint(f"Ключ: {key}, Значение: {value}")
+print('-' * 100)
