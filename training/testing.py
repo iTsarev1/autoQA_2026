@@ -47,3 +47,7 @@ print('-' * 100)
 for item in d.values():
     pprint(item)
 print('-' * 100)
+
+for item in d.items():
+    pprint(item)
+print('-' * 100)
