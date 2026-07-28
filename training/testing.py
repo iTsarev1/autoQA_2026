@@ -63,3 +63,7 @@ iteration_count = 10
 for i in range(3, iteration_count, 2):
     print(f"Текущая итерация: {i}")
 print('-' * 100)
+
+iteration_count = 10
+for i in range(iteration_count, 3, -1):
+    print(f"Текущая итерация {i}")
