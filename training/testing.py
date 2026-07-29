@@ -69,6 +69,8 @@ for i in range(iteration_count, 3, -1):
     print(f"Текущая итерация {i}")
 print('-' * 100)
 
+
+# CONTINUE
 s = 10
 for i in range(s):
     if i % 2 == 0:
