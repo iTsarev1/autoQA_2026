@@ -67,3 +67,10 @@ print('-' * 100)
 iteration_count = 10
 for i in range(iteration_count, 3, -1):
     print(f"Текущая итерация {i}")
+print('-' * 100)
+
+s = 10
+for i in range(s):
+    if i % 2 == 0:
+        continue
+    print(f"Точно НЕчетное число: {i}")
