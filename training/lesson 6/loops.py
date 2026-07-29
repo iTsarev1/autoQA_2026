@@ -92,7 +92,7 @@ s = 10
 for i in range(s):
     if i % 2 == 0:
         continue
-    print(f"Точно четное число: {i}")
+    print(f"Точно НЕчетное число: {i}")
 print('-' * 100)
 
 
