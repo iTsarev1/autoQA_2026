@@ -76,3 +76,13 @@ for i in range(s):
     if i % 2 == 0:
         continue
     print(f"Точно НЕчетное число: {i}")
+print('-' * 100)
+
+
+# enumerate
+
+cities = ["msk", "sar", "spb"]
+i = 1
+for city in cities:
+    print(f"Город {city} на {i} месте по успешности")
+    i += 1
