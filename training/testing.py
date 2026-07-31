@@ -93,3 +93,4 @@ i = 1
 for j, city in enumerate(cities, 1):
     print(f"Город {city} на {i} месте по успешности")
     i += 1
+print('-' * 100)
