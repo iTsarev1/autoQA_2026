@@ -89,8 +89,6 @@ for city in cities:
 print('-' * 100)
 
 cities = ["msk", "sar", "spb"]
-i = 1
-for j, city in enumerate(cities, 1):
-    print(f"Город {city} на {i} месте по успешности")
-    i += 1
+for j, city in enumerate(cities, start=1):
+    print(f"Город {city} на {j} месте по успешности")
 print('-' * 100)
