@@ -11,3 +11,8 @@ def return_tuple():
 n = return_tuple()
 print(n)
 print('-' * 100)
+
+
+n1, n2, n3 = return_tuple()
+print(n1, n2, n3)
+print('-' * 100)
