@@ -28,3 +28,9 @@ def custom(*args):
         print(arg)
 
 custom(1, 2, 3)
+print('-' * 100)
+
+
+def custom_2(*args):
+    print(args)
+    print(*args)
