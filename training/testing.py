@@ -16,3 +16,8 @@ print('-' * 100)
 n1, n2, n3 = return_tuple()
 print(n1, n2, n3)
 print('-' * 100)
+
+
+n1, *n2 = return_tuple()
+print(n1, n2)
+print('-' * 100)
