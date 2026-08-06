@@ -37,3 +37,19 @@ def cities(*args):
         print(f"Город {city}")
 
 cities("Мск", "Sar", "Spb")
+print('-' * 100)
+
+
+# **kwargs
+def custom_name(**kwargs):
+    print(kwargs)
+
+custom_name(name= "Илья", age= "20", city="Sar")
+print('-' * 100)
+
+
+# def kwargs_example(**kwargs):
+#     for key, value in kwargs:
+#         print(f"Город {key} на {value} месте")
+#
+# kwargs_example(key= "Москва", value=5)
