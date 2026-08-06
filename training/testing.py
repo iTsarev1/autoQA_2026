@@ -34,3 +34,5 @@ print('-' * 100)
 def custom_2(*args):
     print(args)
     print(*args)
+
+custom_2(1, 2, 3)
