@@ -23,6 +23,7 @@ print(n1, n2)
 print('-' * 100)
 
 
+#*args
 def custom(*args):
     for arg in args:
         print(arg)
@@ -36,3 +37,4 @@ def custom_2(*args):
     print(*args)
 
 custom_2(1, 2, 3)
+print('-' * 100)
