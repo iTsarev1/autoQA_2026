@@ -30,3 +30,10 @@ def custom_2(*args):
 
 custom_2(1, 2, 3)
 print('-' * 100)
+
+
+def cities(*args):
+    for city in args:
+        print(f"Город {city}")
+
+cities("Мск", "Sar", "Spb")
