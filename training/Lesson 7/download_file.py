@@ -18,6 +18,10 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 browser.config.driver = driver
 
 browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst")
-download_url = browser.element("[data-testid='download-raw-button']").get(query.attribute("href"))
-print(download_url)
 # browser.element("[data-testid='download-raw-button']").click()
+download_url = browser.element("[data-testid='raw-button']").get(query.attribute("href"))
+print(download_url)
+content = requests.get(url=download_url).content
+
+with open("tmp/README.rst", "wb") as f:
+    f.write(content)
