@@ -17,4 +17,4 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 browser.config.driver = driver
 
 browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst")
-browser.element("[data-testid='download-raw-button']").click()
+# browser.element("[data-testid='download-raw-button']").click()
