@@ -24,3 +24,8 @@ content = requests.get(url=download_url).content
 
 with open("tmp/README.rst", "wb") as f:
     f.write(content)
+
+
+with open("tmp/README.rst") as f:
+    file_content_str = f.read()
+    assert "test_answer" in file_content_str
