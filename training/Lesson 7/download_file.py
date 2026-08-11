@@ -6,26 +6,27 @@ from selene import query
 import os
 import requests
 
-options = webdriver.ChromeOptions()
-prefs = {
-    "download.default_directory": "C:/Users/i.tsarev/PythonProjects/PythonProjectTsarev/tmp",
-    "download.prompt_for_download": False
-}
-options.add_experimental_option("prefs", prefs)
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-browser.config.driver = driver
+def test_text_in_downloaded_file():
+    options = webdriver.ChromeOptions()
+    prefs = {
+        "download.default_directory": "C:/Users/i.tsarev/PythonProjects/PythonProjectTsarev/tmp",
+        "download.prompt_for_download": False
+    }
+    options.add_experimental_option("prefs", prefs)
 
-browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst")
-# browser.element("[data-testid='download-raw-button']").click()
-download_url = browser.element("[data-testid='raw-button']").get(query.attribute("href"))
-print(download_url)
-content = requests.get(url=download_url).content
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    browser.config.driver = driver
 
-with open("tmp/README.rst", "wb") as f:
-    f.write(content)
+    browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst")
+    # browser.element("[data-testid='download-raw-button']").click()
+    download_url = browser.element("[data-testid='raw-button']").get(query.attribute("href"))
+    print(download_url)
+    content = requests.get(url=download_url).content
 
+    with open("tmp/README.rst", "wb") as f:
+        f.write(content)
 
-with open("tmp/README.rst") as f:
-    file_content_str = f.read()
-    assert "test_answer" in file_content_str
+    with open("tmp/README.rst") as f:
+        file_content_str = f.read()
+        assert "test_answer" in file_content_str
