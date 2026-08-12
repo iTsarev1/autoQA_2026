@@ -17,8 +17,8 @@ def test_text_in_downloaded_file():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     browser.config.driver = driver
 
-    browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst")
-    # browser.element("[data-testid='download-raw-button']").click()
+    browser.open("http://github.com/pytest-dev/pytest/blob/main/README.rst") # noqa
+    # browser.element("[data-testid='download-raw-button']").click() # noqa
     download_url = browser.element("[data-testid='raw-button']").get(query.attribute("href"))
     print(download_url)
     content = requests.get(url=download_url).content
