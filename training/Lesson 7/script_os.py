@@ -12,3 +12,5 @@ current_file = os.path.abspath(__file__)
 
 current_dir = os.path.dirname(current_file)
 print(current_dir) # папка, где находится
+# куда бы мы не скопировали наш проект, сможем узнать куда нам внутри этого проекта распределить наши tmp,
+# наши файлы скачать/зачитать, сохраненки делать
