@@ -9,7 +9,7 @@ import requests
 def test_text_in_downloaded_file():
     options = webdriver.ChromeOptions()
     prefs = {
-        "download.default_directory": "C:/Users/i.tsarev/PythonProjects/PythonProjectTsarev/tmp",
+        "download.default_directory": "C:/Users/i.tsarev/PythonProjects/PythonProjectTsarev/training/Lesson 7/tmp",
         "download.prompt_for_download": False
     }
     options.add_experimental_option("prefs", prefs)
