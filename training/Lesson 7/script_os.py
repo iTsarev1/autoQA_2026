@@ -8,12 +8,12 @@ import os
 # print(os.path.abspath(__file__))
 
 
-current_file = os.path.abspath(__file__)
+CURRENT_FILE = os.path.abspath(__file__)
 
-current_dir = os.path.dirname(current_file)
-print(current_dir) # папка, где находится объект
+CURRENT_DIR = os.path.dirname(CURRENT_FILE)
+print(CURRENT_DIR) # папка, где находится объект
 # куда бы мы не скопировали наш проект, сможем узнать куда нам внутри этого проекта распределить наши tmp,
 # наши файлы скачать/зачитать, сохраненки делать
 
-tmp_dir = os.path.join(current_dir, 'tmp')
-print(tmp_dir)
+TMP_DIR = os.path.join(CURRENT_DIR, 'tmp')
+print(TMP_DIR)
