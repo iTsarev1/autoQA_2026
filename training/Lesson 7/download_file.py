@@ -9,6 +9,7 @@ import requests
 from script_os import*
 
 
+# Тест скачивает архив, далее импортирует файл в PyCharm + assert
 def test_text_in_downloaded_file():
     options = webdriver.ChromeOptions()
     prefs = {
