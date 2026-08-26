@@ -4,12 +4,13 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selene import query
 import requests
+from script_os import*
 
 
 def test_text_in_downloaded_file():
     options = webdriver.ChromeOptions()
     prefs = {
-        "download.default_directory": "C:/Users/i.tsarev/PythonProjects/PythonProjectTsarev/training/Lesson 7/tmp",
+        "download.default_directory": TMP_DIR,
         "download.prompt_for_download": False
     }
     options.add_experimental_option("prefs", prefs)
