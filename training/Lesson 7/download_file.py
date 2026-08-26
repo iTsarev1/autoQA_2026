@@ -26,9 +26,9 @@ def test_text_in_downloaded_file():
     print(download_url)
     content = requests.get(url=download_url).content
 
-    with open(os.path.join(TMP_DIR, "README.rst"), "wb") as f:
+    with open(os.path.join(TMP_DIR, "README2.rst"), "wb") as f:
         f.write(content)
 
-    with open(os.path.join(TMP_DIR, "README.rst"), "r") as f:
+    with open(os.path.join(TMP_DIR, "README2.rst"), "r") as f:
         file_content_str = f.read()
         assert "test_answer" in file_content_str
