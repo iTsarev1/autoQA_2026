@@ -29,6 +29,6 @@ def test_text_in_downloaded_file():
     with open(os.path.join(TMP_DIR, "README.rst"), "wb") as f:
         f.write(content)
 
-    with open("tmp/README.rst") as f:
+    with open(os.path.join(TMP_DIR, "README.rst"), "r") as f:
         file_content_str = f.read()
         assert "test_answer" in file_content_str
