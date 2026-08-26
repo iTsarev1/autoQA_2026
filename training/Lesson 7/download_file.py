@@ -1,3 +1,5 @@
+import os.path
+
 from selene.support.shared import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -24,7 +26,7 @@ def test_text_in_downloaded_file():
     print(download_url)
     content = requests.get(url=download_url).content
 
-    with open("tmp/README.rst", "wb") as f:
+    with open(os.path.join(TMP_DIR, "README.rst"), "wb") as f:
         f.write(content)
 
     with open("tmp/README.rst") as f:
