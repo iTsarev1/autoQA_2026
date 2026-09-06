@@ -1,11 +1,13 @@
 import pytest
 import csv
 
+
 @pytest.fixture
 def users():
     with open("users.csv") as f:
         users = list(csv.DictReader(f))
     return users
+
 
 @pytest.fixture
 def workers(users):
@@ -18,7 +20,7 @@ def workers(users):
 
 def test_users_are_adults_2(workers):
     """
-    Проверяем, что работники совершеннолетние
+    Тест роверяет, что работники совершеннолетние
     """
     for worker in workers:
         assert int(worker["age"]) >= 18
