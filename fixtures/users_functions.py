@@ -20,7 +20,7 @@ def workers(users):
 
 def test_users_are_adults_2(workers):
     """
-    Тест роверяет, что работники совершеннолетние
+    Тест проверяет, что работники совершеннолетние
     """
     for worker in workers:
         assert int(worker["age"]) >= 18
