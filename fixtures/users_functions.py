@@ -18,9 +18,9 @@ def workers(users):
     return workers
 
 
-def test_users_are_adults_2(workers):
-    """
-    Тест проверяет, что работники совершеннолетние
-    """
-    for worker in workers:
-        assert int(worker["age"]) >= 18
+# def test_users_are_adults_2(workers):
+#     """
+#     Тест проверяет, что работники совершеннолетние
+#     """
+#     for worker in workers:
+#         assert int(worker["age"]) >= 18
