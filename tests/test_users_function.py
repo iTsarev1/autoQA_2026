@@ -7,4 +7,4 @@ from allure import epic, feature, story, title, description, dynamic
 @description("Тест проверяет, что работники совершеннолетние")
 def test_users_are_adults_2(workers):
     for worker in workers:
-        assert int(worker["age"]) >= 18
+        assert int(worker.age) >= 18
