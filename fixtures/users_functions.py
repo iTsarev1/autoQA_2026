@@ -25,9 +25,5 @@ def workers(users) -> list[User]:
     return workers
 
 
-# def test_users_are_adults_2(workers):
-#     """
-#     Тест проверяет, что работники совершеннолетние
-#     """
-#     for worker in workers:
-#         assert int(worker["age"]) >= 18
+def users_are_adults(user: User):  # обозначаем, что функция на вход принимает класс User
+    return user.age >= 18
