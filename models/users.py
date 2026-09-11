@@ -10,7 +10,7 @@ class UserStatus(Enum): # «Создай мне набор постоянных 
 class User:
     name = str
     age = int
-    status = str
+    status = UserStatus
     items = list[str]
 
     # Чтобы этим шаблоном воспользоваться, необходимо описать конструктор класса, то есть то, как мы можем создать из вот этой абстракции,
@@ -37,10 +37,11 @@ if __name__ == '__main__':
          "items": ["book"]}
 
     # в виде объекта наш пользователь будет выглядеть:
-    oleg = User(name="Oleg", age=16, status="student", items=["book"])
-    anna = User(name="Anna", age=17, status="student", items=["pen", "eraser", "notebook"])
-    elena = User(name="Elena", age=15, status="student", items=["book", "pen"])
-    ivan = User(name="Ivan", age=18, status="worker", items=["pen", "notebook"])
+    oleg = User(name="Oleg", age=16, status=UserStatus.student, items=["book"])
+    anna = User(name="Anna", age=17, status=UserStatus.student, items=["pen", "eraser", "notebook"])
+    elena = User(name="Elena", age=15, status=UserStatus.student, items=["book", "pen"])
+    ivan = User(name="Ivan", age=18, status=UserStatus.worker, items=["pen", "notebook"])
+    Maria = User(name="Maria", age=23, status=UserStatus.worker, items=["book", "pen", "notebook"])
     # получается, у нас есть 4 экземпляра одного и того же класса, и эти экземпляры между собой никак не связаны.
     # они представляют собой один и тот же класс, с одним и тем же набором полей, но с разнымными значениями.
 

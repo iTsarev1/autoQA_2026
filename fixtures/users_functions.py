@@ -1,6 +1,6 @@
 import pytest
 import csv
-from models.users import User
+from models.users import User, UserStatus
 
 
 @pytest.fixture
@@ -10,7 +10,7 @@ def users() -> list[User]:
     return [
         User(name=user["name"],
              age=int(user["age"]),
-             status=user["status"],
+             status=UserStatus(user["status"]),
              items=user["items"])
         for user in users
     ]
@@ -23,7 +23,7 @@ def workers(users) -> list[User]:
     """
     Берем только работников из списка пользователей
     """
-    workers = [user for user in users if user.status == "worker"]
+    workers = [user for user in users if user.status == UserStatus.worker]
     return workers
 
 
