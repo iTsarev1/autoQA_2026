@@ -1,3 +1,12 @@
+from enum import Enum
+
+
+class UserStatus(Enum): # «Создай мне набор постоянных констант». мы UserStatus наследуем у Enum
+    student = "student"
+    worker = "worker"
+# Enum создаёт список разрешённых значений, которые нельзя изменить
+
+
 class User:
     name = str
     age = int
