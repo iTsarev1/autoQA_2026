@@ -1,4 +1,4 @@
-from fixtures.users_functions import users_are_adults, workers, users
+from fixtures.users_functions import workers, users
 import pytest
 from allure import epic, feature, story, title, description, dynamic
 
@@ -7,4 +7,4 @@ from allure import epic, feature, story, title, description, dynamic
 @description("Тест проверяет, что работники совершеннолетние")
 def test_users_are_adults_2(workers):
     for worker in workers:
-        assert users_are_adults(worker)
+        assert worker.age >= 18

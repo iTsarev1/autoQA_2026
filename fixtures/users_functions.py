@@ -14,7 +14,9 @@ def users() -> list[User]:
              items=user["items"])
         for user in users
     ]
-
+# -> list[User] это аннотация типов. Он говорит: «Я сейчас скажу тебе тип того, что вернёт эта функция».
+# Когда другой программист откроет твой файл, он сразу увидит: «Ага, эта штука мне отдаст именно список сотрудников!»,
+# а не какие-нибудь числа или словарь
 
 @pytest.fixture
 def workers(users) -> list[User]:
@@ -25,5 +27,5 @@ def workers(users) -> list[User]:
     return workers
 
 
-def users_are_adults(user: User):  # обозначаем, что функция на вход принимает класс User
-    return user.age >= 18
+# def users_are_adults(user: User):  # обозначаем, что функция на вход принимает класс User
+#     return user.age >= 18
