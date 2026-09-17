@@ -23,6 +23,11 @@ class TestProducts:
             assert product.check_quantity(1000) is True
             assert product.check_quantity(1001) is False, "На складе нет такого кол-ва товара"
 
+    def test_product_check_invalid_quantity(self, product):
+        assert product.check_invalid_quantity(0) is False, "Значение должно быть больше нуля"
+        assert product.check_invalid_quantity(-1) is False, f"Значение должно быть больше нуля"
+        assert product.check_invalid_quantity(0.1) is True
+
     def test_product_buy(self, product):
         # TODO напишите проверки на метод buy
         pass

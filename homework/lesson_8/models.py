@@ -26,6 +26,12 @@ class Product:
         # else:
         #     return False
 
+    def check_invalid_quantity(self, quantity) -> bool:
+        """
+        Проверка но ввод значений <= 0
+        """
+        return quantity > 0
+
     def buy(self, quantity):
         """
         TODO реализуйте метод покупки
