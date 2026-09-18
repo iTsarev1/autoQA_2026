@@ -2,7 +2,6 @@
 Протестируйте классы из модуля homework/models.py
 """
 import pytest
-
 from homework.lesson_8.models import Product
 
 
