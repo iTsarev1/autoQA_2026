@@ -16,29 +16,33 @@ class TestProducts:
     Например, текущий класс группирует тесты на класс Product
     """
 
+
     def test_product_check_quantity(self, product):
         # TODO напишите проверки на метод check_quantity
         assert product.check_quantity(10) is True
         assert product.check_quantity(1000) is True
         assert product.check_quantity(1001) is False, "На складе нет такого кол-ва товара"
 
+
     def test_product_check_invalid_quantity(self, product):
         assert product.check_invalid_quantity(0) is False, "Значение должно быть больше нуля"
         assert product.check_invalid_quantity(-1) is False, f"Значение должно быть больше нуля"
         assert product.check_invalid_quantity(0.1) is True
+
 
     def test_product_buy_positive(self, product):
         # TODO напишите проверки на метод buy
         product.buy(5)
         assert product.quantity == 995
 
+
     def test_product_buy_zero(self, product):
         product.buy(1000)
         assert product.quantity == 0
 
-    # def test_product_buy_negative(self, product):
-    #     product.buy(1001)
-    #     assert product.quantity == 0
+    def test_product_buy_negative(self, product):
+        pass
+
 
     def test_product_buy_more_than_available(self, product):
         # TODO напишите проверки на метод buy,

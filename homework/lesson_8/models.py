@@ -10,11 +10,13 @@ class Product:
     description: str
     quantity: int
 
+
     def __init__(self, name, price, description, quantity):
         self.name = name
         self.price = price
         self.description = description
         self.quantity = quantity
+
 
     def check_quantity(self, quantity) -> bool:
         """
@@ -24,16 +26,13 @@ class Product:
         return self.quantity >= quantity # «Не надо проверять условие и потом решать, какое слово вернуть.
         # Просто посчитай сравнение и сразу отдай то, что получилось»
 
-        # if self.quantity >= quantity:
-        #     return True
-        # else:
-        #     return False
 
     def check_invalid_quantity(self, quantity) -> bool:
         """
         Проверка но ввод значений <= 0
         """
         return quantity > 0
+
 
     def buy(self, quantity):
         """
@@ -46,6 +45,7 @@ class Product:
             # return self.quantity
         else:
             raise ValueError("Запрошено больше, чем есть в наличии")
+
 
     def __hash__(self):
         return hash(self.name + self.description)
