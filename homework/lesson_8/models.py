@@ -1,3 +1,6 @@
+from operator import truediv
+
+
 class Product:
     """
     Класс продукта
@@ -38,7 +41,11 @@ class Product:
             Проверьте количество продукта используя метод check_quantity
             Если продуктов не хватает, то выбросите исключение ValueError
         """
-        raise NotImplementedError
+        if self.check_quantity(quantity):
+            self.quantity -= quantity
+            return self.quantity
+        else:
+            raise ValueError("Запрошено больше, чем есть в наличии")
 
     def __hash__(self):
         return hash(self.name + self.description)
