@@ -43,7 +43,7 @@ class Product:
         """
         if self.check_quantity(quantity):
             self.quantity -= quantity
-            return self.quantity
+            # return self.quantity
         else:
             raise ValueError("Запрошено больше, чем есть в наличии")
 
