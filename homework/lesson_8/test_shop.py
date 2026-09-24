@@ -41,7 +41,10 @@ class TestProducts:
         assert product.quantity == 0
 
     def test_product_buy_negative(self, product):
-        pass
+        try:
+            product.buy(1001)
+        except ValueError as e:
+            assert str(e) == "Запрошено больше, чем есть в наличии"
 
 
     def test_product_buy_more_than_available(self, product):
