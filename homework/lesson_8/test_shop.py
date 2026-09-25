@@ -47,12 +47,6 @@ class TestProducts:
             assert str(e) == "Запрошено больше, чем есть в наличии"
 
 
-    def test_product_buy_more_than_available(self, product):
-        # TODO напишите проверки на метод buy,
-        #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
-        pass
-
-
 class TestCart:
     """
     TODO Напишите тесты на методы класса Cart
