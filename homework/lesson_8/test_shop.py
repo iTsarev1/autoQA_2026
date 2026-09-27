@@ -2,7 +2,17 @@
 Протестируйте классы из модуля homework/models.py
 """
 import pytest
-from homework.lesson_8.models import Product
+from homework.lesson_8.models import Product, Cart
+
+
+@pytest.fixture
+def cart()->Cart:
+    """
+    Возвращает чистую пустую корзину
+    """
+    return Cart()
+# Ты определяешь новую фикстуру по имени cart. Она ничего не принимает на вход (() пустые), а возвращает объект класса Cart.
+# Стрелочка -> Cart — это аннотация типа возвращаемого значения. Ты сообщаешь PyCharm и другим инструментам статического анализа, что эта функция вернёт именно корзину.
 
 
 @pytest.fixture
@@ -54,3 +64,6 @@ class TestCart:
         На некоторые методы у вас может быть несколько тестов.
         Например, негативные тесты, ожидающие ошибку (используйте pytest.raises, чтобы проверить это)
     """
+
+    def test_cart_add_product(self, cart):
+        pass
