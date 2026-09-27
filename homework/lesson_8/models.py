@@ -75,10 +75,6 @@ class Cart:
             self.products[product] = buy_count
 
 
-        if product in self.products:
-            self.products[product] += product
-        raise NotImplementedError
-
     def remove_product(self, product: Product, remove_count=None):
         """
         Метод удаления продукта из корзины.
