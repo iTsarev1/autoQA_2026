@@ -65,5 +65,7 @@ class TestCart:
         Например, негативные тесты, ожидающие ошибку (используйте pytest.raises, чтобы проверить это)
     """
 
-    def test_cart_add_product(self, cart):
-        pass
+    def test_cart_add_product(self, cart, product):
+        cart.add_product(product, 5)
+        assert product in cart.products
+        assert cart.products[product] == 5
