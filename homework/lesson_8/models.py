@@ -84,7 +84,16 @@ class Cart:
         Если remove_count не передан, то удаляется вся позиция
         Если remove_count больше, чем количество продуктов в позиции, то удаляется вся позиция
         """
-        raise NotImplementedError
+        if remove_count is None or remove_count > self.products[product]:
+            del self.products[product] # self.products[product] — это текущее количество этого товара у покупателя в корзине
+        else:
+            self.products[product] -= remove_count
+
+# self.products - это и есть полностью наша корзина
+# self.products[product] - это ровно то число, которое показывает, сколько именно этого конкретного товара лежит в корзине у данного покупателя
+# self.products[product] - текущее состояние позиции в корзине
+# Когда ты пишешь self.products[apple], ты говоришь Python'у: *«Возьми мой текущий объект корзины».
+# «Найди внутри его атрибута .products тот самый товар-яблоко». «Покажи мне значение, привязанное к этому товару».
 
     def clear(self):
         raise NotImplementedError
