@@ -101,7 +101,11 @@ class Cart:
         self.products.clear()
 
     def get_total_price(self) -> float:
-        return sum(self.products.values())
+        total_price = 0
+        for product, quantity in self.products.items():
+            total_price += float(product.price) * quantity
+        return float(total_price)
+
 
 
     def buy(self):
