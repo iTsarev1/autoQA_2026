@@ -103,10 +103,12 @@ class Cart:
     def get_total_price(self) -> float:
         total_price = 0
         for product, quantity in self.products.items():
+# .items(): Это специальный метод словарей Python. Он превращает весь словарь в список пар (ключ, значение) и выдаёт эти пары одну за другой.
+# Множественное присвоение (for p,q in...)На каждой итерации цикла Python берёт очередную пару из словаря и распаковывает её в две разные переменные.
+# Переменная product получает ссылку на текущий объект товара (экземпляр класса Product). Именно через неё мы можем обратиться к цене: product.price.
+# Переменная quantity получает конкретное число штук именно в этой корзине. Она имеет тип int.
             total_price += float(product.price) * quantity
         return float(total_price)
-
-
 
     def buy(self):
         """
