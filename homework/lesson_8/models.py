@@ -98,7 +98,7 @@ class Cart:
 # «Найди внутри его атрибута .products тот самый товар-яблоко». «Покажи мне значение, привязанное к этому товару».
 
     def clear(self):
-        raise NotImplementedError
+        self.products.clear()
 
     def get_total_price(self) -> float:
         raise NotImplementedError
