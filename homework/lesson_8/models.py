@@ -116,4 +116,8 @@ class Cart:
         Учтите, что товаров может не хватать на складе.
         В этом случае нужно выбросить исключение ValueError
         """
-        raise NotImplementedError
+        for product, quantity in self.products.items():
+            if product.check_quantity(quantity):
+                product.buy(quantity)
+            else:
+                raise ValueError("Товаров не достаточно на складе")
