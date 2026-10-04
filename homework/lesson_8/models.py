@@ -116,9 +116,11 @@ class Cart:
         Учтите, что товаров может не хватать на складе.
         В этом случае нужно выбросить исключение ValueError
         """
+        # Перебираем все позиции своей корзины через .items(). Если хоть одна позиция проваливает проверку,то ValueError-> Покупка прерывается
         for product, quantity in self.products.items():
             if not product.check_quantity(quantity):
                 raise ValueError(f"Недостаточно {product.name}: запрошено {quantity}, на складе {product.quantity}")
+        # Повторно проходим по тем же самым позициям. Покупаем. Вычитаем купленное из склада. Чистим корзину
         for product, quantity in self.products.items():
             product.buy(quantity)
         self.products.clear()
