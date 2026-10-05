@@ -69,3 +69,6 @@ class TestCart:
         cart.add_product(product, 5)
         assert product in cart.products
         assert cart.products[product] == 5
+
+    def test_cart_remove_product(self, cart, product):
+        pass
