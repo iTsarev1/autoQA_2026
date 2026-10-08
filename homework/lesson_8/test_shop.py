@@ -75,3 +75,5 @@ class TestCart:
         cart.add_product(product, 5)
         # проверка наличия товара в корзине перед удалением
         assert product in cart.products
+        cart.remove_product(product)
+        assert product not in cart.products
