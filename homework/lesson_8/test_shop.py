@@ -77,3 +77,6 @@ class TestCart:
         assert product in cart.products
         cart.remove_product(product)
         assert product not in cart.products
+        cart.add_product(product, 7)
+        cart.remove_product(product, 5)
+        assert cart.products[product] == 2
