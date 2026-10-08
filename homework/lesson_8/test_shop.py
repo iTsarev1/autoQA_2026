@@ -71,4 +71,7 @@ class TestCart:
         assert cart.products[product] == 5
 
     def test_cart_remove_product(self, cart, product):
-        pass
+        # добавить товар в корзину
+        cart.add_product(product, 5)
+        # проверка наличия товара в корзине перед удалением
+        assert product in cart.products
