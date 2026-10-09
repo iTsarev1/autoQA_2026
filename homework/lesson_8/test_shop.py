@@ -82,5 +82,7 @@ class TestCart:
         # проверка частичного уменьшение количества
         assert cart.products[product] == 2
 
-    def test_cart_clear(self, cart):
-        pass
+    def test_cart_clear(self, cart, product):
+        cart.add_product(product, 5)
+        cart.clear()
+        assert cart.products == {}
