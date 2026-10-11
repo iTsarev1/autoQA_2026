@@ -89,5 +89,6 @@ class TestCart:
 
     def test_get_total_price(self, cart, product):
         cart.add_product(product, 5)
-        cart.get_total_price()
-        assert cart.products[product] == 5
+        actual_sum = cart.get_total_price()
+        assert actual_sum == cart.products[product] * product.price
+
