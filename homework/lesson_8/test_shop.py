@@ -88,4 +88,6 @@ class TestCart:
         assert cart.products == {}
 
     def test_get_total_price(self, cart, product):
-        pass
+        cart.add_product(product, 5)
+        cart.get_total_price()
+        assert cart.products[product] == 5
