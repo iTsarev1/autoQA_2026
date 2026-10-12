@@ -88,7 +88,10 @@ class TestCart:
         assert cart.products == {}
 
     def test_get_total_price(self, cart, product):
+        # Создаем начальное состояние
         initial_quantity_in_cart = 3
+        # Переменная с осмысленным именем (initial_...) гораздо понятнее при отладке, чем просто число 3.
+        # Теперь в словаре корзины лежит пара {<product>: 3}
         cart.add_product(product, initial_quantity_in_cart)
         total_price = float(product.price) * initial_quantity_in_cart
         assert total_price == cart.get_total_price()
