@@ -96,3 +96,7 @@ class TestCart:
         total_price = float(product.price) * initial_quantity_in_cart
         assert total_price == cart.get_total_price()
 
+    def test_buy(self, product, cart):
+        pass
+
+
