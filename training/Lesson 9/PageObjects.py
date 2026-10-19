@@ -3,7 +3,7 @@
 from selene.support.shared import browser
 from selene import have
 from selene import command
-from models.resources import resource_path
+from models import resources
 
 
 def test_student_registration_form():
@@ -19,7 +19,7 @@ browser.all('[name=gender]').element_by(have.value('Female')).element('..').clic
 browser.element('#userNumber').type('1234567891')
 browser.element('#subjectsInput').type('Computer Science').press_enter()
 browser.all('.custom-checkbox').element_by(have.exact_text('Reading')).click()
-browser.element('#uploadPicture').set_value(resource_path('foto.jpg'))
+browser.element('#uploadPicture').set_value(resources.resource_path('foto.jpg'))
 browser.element('#currentAddress').type('Moscowskaya Street 18')
 browser.element('#state').perform(command.js.scroll_into_view)
 browser.element('#state').click()
