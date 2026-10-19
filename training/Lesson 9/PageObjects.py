@@ -1,14 +1,10 @@
 # Объектно-ориентированная парадигма для построения модели для тестов
 
-from pathlib import Path
 from selene.support.shared import browser
 from selene import have
 from selene import command
-import tests
+from models.resources import resource_path
 
-
-def resource_path (file_name):
-    str(Path(tests._file_).parent.joinpath(f'resources/{file_name}').absolute())
 
 def test_student_registration_form():
     browser.open('/automation-practice-form')
