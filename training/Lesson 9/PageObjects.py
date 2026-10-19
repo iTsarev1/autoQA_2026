@@ -23,7 +23,23 @@ browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
 browser.element('#currentAddress').type('Moscowskaya Street 18')
 browser.element('#state').perform(command.js.scroll_into_view)
 browser.element('#state').click()
-browser.all('[id^=react-select][id*=option]').element_by(have.exact_text( 'NCR')).click()
+browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('NCR')).click()
 browser.element('#city').click()
 browser.all('[id^=react-select][id*=option]').element_by(have. exact_text('Delhi')).click()
 browser.element('#submit').perform(command.js.click)
+
+# THEN
+browser.element('Table').all('td').even.should(
+    have.exact_text(
+        'Olga YA',
+        'name@example.com',
+        'Female',
+        '1234567891',
+        '11 May, 1999',
+        'Computer Science',
+        'Reading',
+        'foto.jpg',
+        'Moscowskaya Street 18',
+        'NCR Delhi'
+    )
+)
