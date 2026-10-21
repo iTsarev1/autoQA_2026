@@ -18,7 +18,7 @@ def test_student_registration_form():
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
     browser.element('#userNumber').type('1234567891')
     browser.element('#subjectsInput').type('Computer Science').press_enter()
-    browser.all('#hobbies-checkbox-2').element_by(have.value('Reading')).click()
+    browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
     browser.element('#currentAddress').type('Moscowskaya Street 18')
     browser.element('#state').perform(command.js.scroll_into_view)
