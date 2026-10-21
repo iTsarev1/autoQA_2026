@@ -8,7 +8,7 @@ from models import resource
 
 def test_student_registration_form():
     browser.open('https://demoqa.com/automation-practice-form')
-    browser.all('[id^=google_ads][id$=container__]').with_(timeout=10).wait_until(have.size_greater_than_or_equal(3))
+    browser.all('[id^=google_ads][id$=container__]').with_(timeout=1).wait_until(have.size_greater_than_or_equal(3))
     browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 
     # WHEN
@@ -18,7 +18,7 @@ def test_student_registration_form():
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
     browser.element('#userNumber').type('1234567891')
     browser.element('#subjectsInput').type('Computer Science').press_enter()
-    browser.element('#hobbies-checkbox-2').element_by(have.text('Reading')).click()
+    browser.all('#hobbies-checkbox-2').element_by(have.text('Reading')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
     browser.element('#currentAddress').type('Moscowskaya Street 18')
     browser.element('#state').perform(command.js.scroll_into_view)
