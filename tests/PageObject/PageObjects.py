@@ -20,7 +20,7 @@ def test_student_registration_form():
     browser.element('#dateOfBirthInput').click()
     browser.element('.react-datepicker__month-select').type('May')
     browser.element('.react-datepicker__year-select').type('1999')
-    browser.all('.react-datepicker__day').by(have.exact_text('11')).first.click()
+    browser.element(f'.react-datepicker__day--0{11}:not(.react-datepicker__day--outside-month)').click()
     browser.element('#subjectsInput').type('Computer Science').press_enter()
     browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
