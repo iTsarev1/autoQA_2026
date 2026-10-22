@@ -39,7 +39,7 @@ def test_student_registration_form():
             'name@example.com',
             'Female',
             '1234567891',
-            '11 May 1999',
+            '11 May,1999',
             'Computer Science',
             'Reading',
             'foto.jpg',
