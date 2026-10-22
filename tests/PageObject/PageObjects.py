@@ -30,7 +30,7 @@ def test_student_registration_form():
 
     # THEN
     browser.element('Table').all('td').even.should(
-        have.exact_text(
+        have.exact_text([
             'Olga YA',
             'name@example.com',
             'Female',
@@ -41,5 +41,5 @@ def test_student_registration_form():
             'foto.jpg',
             'Moscowskaya Street 18',
             'NCR Delhi'
-        )
+        ])
     )
