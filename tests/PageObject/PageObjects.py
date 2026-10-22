@@ -17,6 +17,7 @@ def test_student_registration_form():
     browser.element('#userEmail').type('name@example.com' )
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
     browser.element('#userNumber').type('1234567891')
+    browser.element('#dateOfBirthInput').click().clear().type('11 May 1999')
     browser.element('#subjectsInput').type('Computer Science').press_enter()
     browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
@@ -30,16 +31,16 @@ def test_student_registration_form():
 
     # THEN
     browser.element('Table').all('td').even.should(
-        have.exact_text([
+        have.exact_texts(
             'Olga YA',
             'name@example.com',
             'Female',
             '1234567891',
-            '11 May, 1999',
+            '11 May 1999',
             'Computer Science',
             'Reading',
             'foto.jpg',
             'Moscowskaya Street 18',
             'NCR Delhi'
-        ])
+        )
     )
