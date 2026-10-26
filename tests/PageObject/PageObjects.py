@@ -23,20 +23,11 @@ class RegistrationForm:
         browser.element('.react-datepicker__year-select').type('1999')
         browser.element(f'.react-datepicker__day--0{11}:not(.react-datepicker__day--outside-month)').click()
 
-    def should_registered_user_with(self, first_Name, last_Name, user_Email, user_Number, birthday, subjects, hobbies, upload_picture,
+    def should_registered_user_with(self, first_name, last_name, user_email, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
         browser.element('Table').all('td').even.should(
             have.exact_texts(
-                'Olga YA',
-                'name@example.com',
-                'Female',
-                '1234567891',
-                '11 May,1999',
-                'Computer Science',
-                'Reading',
-                'foto.jpg',
-                'Moscowskaya Street 18',
-                'NCR Delhi'
+                f'{first_name}, {last_name}, {user_email}, {user_number}, {birthday}, {subjects}, {hobbies}, {upload_picture}, {current_address}, {state_and_city}'
             )
         )
 
