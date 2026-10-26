@@ -1,4 +1,5 @@
 # Объектно-ориентированная парадигма для построения модели для тестов
+from symtable import Class
 
 from selene.support.shared import browser
 from selene import have
@@ -6,10 +7,20 @@ from selene import command
 from models import resource
 
 
+class RegistrationForm:
+
+    def open(self):
+        browser.open('https://demoqa.com/automation-practice-form')
+        browser.all('[id^=google_ads][id$=container__]').with_(timeout=1).wait_until(have.size_greater_than_or_equal(3))
+        browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
+
+
+
 def test_student_registration_form():
-    browser.open('https://demoqa.com/automation-practice-form')
-    browser.all('[id^=google_ads][id$=container__]').with_(timeout=1).wait_until(have.size_greater_than_or_equal(3))
-    browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
+    registration_form = RegistrationForm()
+    # открыть форму регистрации
+    registration_form.open()
+
 
     # WHEN
     browser.element('#firstName').type('Olga')
