@@ -14,8 +14,8 @@ class RegistrationForm:
         browser.all('[id^=google_ads][id$=container__]').with_(timeout=1).wait_until(have.size_greater_than_or_equal(3))
         browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 
-    def type_firstName(self, value):
-        browser.element('#firstName').type('Olga')
+    def fill_firstName(self, value):
+        browser.element('#firstName').type(value)
 
 
 def test_student_registration_form():
@@ -25,8 +25,7 @@ def test_student_registration_form():
 
 
     # WHEN
-    registration_form.type_firstName('Olga')
-
+    registration_form.fill_firstName('Olga') # fill - вставляет всю строку целиком, type - посимвольно вводит текст, как живой человек
     browser.element('#lastName').type('YA')
     browser.element('#userEmail').type('name@example.com' )
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
