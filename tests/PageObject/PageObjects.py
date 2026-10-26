@@ -17,6 +17,29 @@ class RegistrationForm:
     def fill_firstName(self, value):
         browser.element('#firstName').type(value)
 
+    def fill_birthday(self, year, month, day):
+        browser.element('#dateOfBirthInput').click()
+        browser.element('.react-datepicker__month-select').type('May')
+        browser.element('.react-datepicker__year-select').type('1999')
+        browser.element(f'.react-datepicker__day--0{11}:not(.react-datepicker__day--outside-month)').click()
+
+    def should_registered_user_with(self, first_Name, last_Name, user_Email, user_Number, birthday, subjects, hobbies, upload_picture,
+                                    current_address, state_and_city):
+        browser.element('Table').all('td').even.should(
+            have.exact_texts(
+                'Olga YA',
+                'name@example.com',
+                'Female',
+                '1234567891',
+                '11 May,1999',
+                'Computer Science',
+                'Reading',
+                'foto.jpg',
+                'Moscowskaya Street 18',
+                'NCR Delhi'
+            )
+        )
+
 
 def test_student_registration_form():
     registration_form = RegistrationForm()
@@ -30,10 +53,8 @@ def test_student_registration_form():
     browser.element('#userEmail').type('name@example.com' )
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
     browser.element('#userNumber').type('1234567891')
-    browser.element('#dateOfBirthInput').click()
-    browser.element('.react-datepicker__month-select').type('May')
-    browser.element('.react-datepicker__year-select').type('1999')
-    browser.element(f'.react-datepicker__day--0{11}:not(.react-datepicker__day--outside-month)').click()
+    registration_form.fill_birthday('1999', 'May', '11')
+
     browser.element('#subjectsInput').type('Computer Science').press_enter()
     browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
@@ -46,17 +67,16 @@ def test_student_registration_form():
     browser.element('#submit').perform(command.js.click)
 
     # THEN
-    browser.element('Table').all('td').even.should(
-        have.exact_texts(
-            'Olga YA',
-            'name@example.com',
-            'Female',
-            '1234567891',
-            '11 May,1999',
-            'Computer Science',
-            'Reading',
-            'foto.jpg',
-            'Moscowskaya Street 18',
-            'NCR Delhi'
-        )
+    # пользователь должен зарегистрироваться со следующими данными
+    registration_form.should_registered_user_with(
+        'Olga YA',
+        'name@example.com',
+        'Female',
+        '1234567891',
+        '11 May,1999',
+        'Computer Science',
+        'Reading',
+        'foto.jpg',
+        'Moscowskaya Street 18',
+        'NCR Delhi'
     )
