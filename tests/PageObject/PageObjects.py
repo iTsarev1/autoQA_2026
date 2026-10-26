@@ -23,11 +23,11 @@ class RegistrationForm:
         browser.element('.react-datepicker__year-select').type('1999')
         browser.element(f'.react-datepicker__day--0{11}:not(.react-datepicker__day--outside-month)').click()
 
-    def should_registered_user_with(self, first_name, last_name, user_email, user_number, birthday, subjects, hobbies, upload_picture,
+    def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
         browser.element('Table').all('td').even.should(
             have.exact_texts(
-                f'{first_name}, {last_name}, {user_email}, {user_number}, {birthday}, {subjects}, {hobbies}, {upload_picture}, {current_address}, {state_and_city}'
+                full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture, current_address, state_and_city
             )
         )
 
@@ -40,7 +40,8 @@ def test_student_registration_form():
 
     # WHEN
     registration_form.fill_firstName('Olga') # fill - вставляет всю строку целиком, type - посимвольно вводит текст, как живой человек
-    browser.element('#lastName').type('YA')
+    registration_form.fill_last_name('YA')
+
     browser.element('#userEmail').type('name@example.com' )
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
     browser.element('#userNumber').type('1234567891')
