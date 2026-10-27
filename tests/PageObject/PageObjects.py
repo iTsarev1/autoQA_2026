@@ -17,11 +17,14 @@ class RegistrationForm:
     def fill_firstName(self, value):
         browser.element('#firstName').type(value)
 
+    def fill_last_name(self, value):
+        browser.element('#lastName').type(value)
+
     def fill_birthday(self, year, month, day):
         browser.element('#dateOfBirthInput').click()
-        browser.element('.react-datepicker__month-select').type('May')
-        browser.element('.react-datepicker__year-select').type('1999')
-        browser.element(f'.react-datepicker__day--0{11}:not(.react-datepicker__day--outside-month)').click()
+        browser.element('.react-datepicker__month-select').type(month)
+        browser.element('.react-datepicker__year-select').type(year)
+        browser.element(f'.react-datepicker__day--0{day}:not(.react-datepicker__day--outside-month)').click()
 
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
@@ -37,8 +40,6 @@ def test_student_registration_form():
     # открыть форму регистрации
     registration_form.open()
 
-
-    # WHEN
     registration_form.fill_firstName('Olga') # fill - вставляет всю строку целиком, type - посимвольно вводит текст, как живой человек
     registration_form.fill_last_name('YA')
 
