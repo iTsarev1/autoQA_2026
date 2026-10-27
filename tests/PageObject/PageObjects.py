@@ -11,8 +11,9 @@ def test_student_registration_form():
     registration_form = RegistrationForm()
     # открыть форму регистрации
     registration_form.open()
-
+    # вставить имя в строку
     registration_form.fill_firstName('Olga') # fill - вставляет всю строку целиком, type - посимвольно вводит текст, как живой человек
+    # вставить фамилию в строку
     registration_form.fill_last_name('YA')
 
     browser.element('#userEmail').type('name@example.com' )
