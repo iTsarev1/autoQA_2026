@@ -28,3 +28,6 @@ class RegistrationForm:
                 full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture, current_address, state_and_city
             )
         )
+
+    def fill_email(self):
+        browser.element('#userEmail').type('name@example.com')

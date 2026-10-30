@@ -15,8 +15,9 @@ def test_student_registration_form():
     registration_form.fill_firstName('Olga') # fill - вставляет всю строку целиком, type - посимвольно вводит текст, как живой человек
     # вставить фамилию в строку
     registration_form.fill_last_name('YA')
+    # вставить email в строку
+    registration_form.fill_email()
 
-    browser.element('#userEmail').type('name@example.com' )
     browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
     browser.element('#userNumber').type('1234567891')
     registration_form.fill_birthday('1999', 'May', '11')
