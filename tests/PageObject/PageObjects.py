@@ -21,9 +21,13 @@ def test_student_registration_form():
     registration_form.choose_female()
     # вставить номер телефона в строку
     registration_form.fill_number()
+    # выбрать дату рождения
     registration_form.fill_birthday('1999', 'May', '11')
+    # вставить предметы в строку
+    registration_form.fill_subjects()
 
-    browser.element('#subjectsInput').type('Computer Science').press_enter()
+
+
     browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
     browser.element('#currentAddress').type('Moscowskaya Street 18')

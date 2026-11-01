@@ -30,6 +30,9 @@ class RegistrationForm:
         browser.element('.react-datepicker__year-select').type(year)
         browser.element(f'.react-datepicker__day--0{day}:not(.react-datepicker__day--outside-month)').click()
 
+    def fill_subjects(self):
+        browser.element('#subjectsInput').type('Computer Science').press_enter()
+
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
         browser.element('Table').all('td').even.should(
@@ -37,3 +40,4 @@ class RegistrationForm:
                 full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture, current_address, state_and_city
             )
         )
+
