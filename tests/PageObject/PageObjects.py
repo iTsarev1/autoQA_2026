@@ -3,7 +3,6 @@
 from selene.support.shared import browser
 from selene import have
 from selene import command
-from models import resource
 from pages.registration_form.registration_form_page import RegistrationForm
 
 
@@ -26,11 +25,9 @@ def test_student_registration_form():
     # вставить предметы в строку
     registration_form.fill_subjects()
     # вставить хобби в строку
-    registration_form.fill_hobbies()
-
-
-
-    browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
+    registration_form.choose_hobbies()
+    # выбрать файл
+    registration_form.choose_picture()
     browser.element('#currentAddress').type('Moscowskaya Street 18')
     browser.element('#state').perform(command.js.scroll_into_view)
     browser.element('#state').click()

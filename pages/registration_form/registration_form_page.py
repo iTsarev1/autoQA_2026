@@ -1,6 +1,8 @@
 from selene import have, command
 from selene.support.shared import browser
 
+from models import resource
+
 
 class RegistrationForm:
 
@@ -33,8 +35,11 @@ class RegistrationForm:
     def fill_subjects(self):
         browser.element('#subjectsInput').type('Computer Science').press_enter()
 
-    def fill_hobbies(self):
+    def choose_hobbies(self):
         browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
+
+    def choose_picture(self):
+        browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
 
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
