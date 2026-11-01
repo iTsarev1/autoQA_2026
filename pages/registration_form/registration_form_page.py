@@ -41,6 +41,9 @@ class RegistrationForm:
     def choose_picture(self):
         browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
 
+    def fill_current_address(self):
+        browser.element('#currentAddress').type('Moscowskaya Street 18')
+
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
         browser.element('Table').all('td').even.should(

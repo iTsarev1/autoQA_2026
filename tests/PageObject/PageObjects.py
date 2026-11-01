@@ -28,7 +28,8 @@ def test_student_registration_form():
     registration_form.choose_hobbies()
     # выбрать файл
     registration_form.choose_picture()
-    browser.element('#currentAddress').type('Moscowskaya Street 18')
+    # вставить адрес в строку
+    registration_form.fill_current_address()
     browser.element('#state').perform(command.js.scroll_into_view)
     browser.element('#state').click()
     browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('NCR')).click()
