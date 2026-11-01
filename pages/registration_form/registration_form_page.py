@@ -44,6 +44,14 @@ class RegistrationForm:
     def fill_current_address(self):
         browser.element('#currentAddress').type('Moscowskaya Street 18')
 
+    def choose_state_and_city(self):
+        browser.element('#state').perform(command.js.scroll_into_view)
+        browser.element('#state').click()
+        browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('NCR')).click()
+        browser.element('#city').click()
+        browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('Delhi')).click()
+        browser.element('#submit').perform(command.js.click)
+
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
         browser.element('Table').all('td').even.should(
@@ -51,4 +59,3 @@ class RegistrationForm:
                 full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture, current_address, state_and_city
             )
         )
-

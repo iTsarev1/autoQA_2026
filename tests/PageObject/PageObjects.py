@@ -1,8 +1,5 @@
 # Объектно-ориентированная парадигма для построения модели для тестов
 
-from selene.support.shared import browser
-from selene import have
-from selene import command
 from pages.registration_form.registration_form_page import RegistrationForm
 
 
@@ -30,14 +27,9 @@ def test_student_registration_form():
     registration_form.choose_picture()
     # вставить адрес в строку
     registration_form.fill_current_address()
-    browser.element('#state').perform(command.js.scroll_into_view)
-    browser.element('#state').click()
-    browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('NCR')).click()
-    browser.element('#city').click()
-    browser.all('[id^=react-select][id*=option]').element_by(have. exact_text('Delhi')).click()
-    browser.element('#submit').perform(command.js.click)
+    # выбрать штат и город
+    registration_form.choose_state_and_city()
 
-    # THEN
     # пользователь должен зарегистрироваться со следующими данными
     registration_form.should_registered_user_with(
         'Olga YA',
