@@ -15,6 +15,15 @@ class RegistrationForm:
     def fill_last_name(self, value):
         browser.element('#lastName').type(value)
 
+    def fill_email(self):
+        browser.element('#userEmail').type('name@example.com')
+
+    def choose_female(self):
+        browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
+
+    def fill_number(self):
+        browser.element('#userNumber').type('1234567891')
+
     def fill_birthday(self, year, month, day):
         browser.element('#dateOfBirthInput').click()
         browser.element('.react-datepicker__month-select').type(month)
@@ -28,10 +37,3 @@ class RegistrationForm:
                 full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture, current_address, state_and_city
             )
         )
-
-    def fill_email(self):
-        browser.element('#userEmail').type('name@example.com')
-
-
-    def choose_female(self):
-        browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
