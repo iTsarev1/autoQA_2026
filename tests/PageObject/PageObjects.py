@@ -25,10 +25,11 @@ def test_student_registration_form():
     registration_form.fill_birthday('1999', 'May', '11')
     # вставить предметы в строку
     registration_form.fill_subjects()
+    # вставить хобби в строку
+    registration_form.fill_hobbies()
 
 
 
-    browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
     browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
     browser.element('#currentAddress').type('Moscowskaya Street 18')
     browser.element('#state').perform(command.js.scroll_into_view)

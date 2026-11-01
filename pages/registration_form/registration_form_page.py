@@ -33,6 +33,9 @@ class RegistrationForm:
     def fill_subjects(self):
         browser.element('#subjectsInput').type('Computer Science').press_enter()
 
+    def fill_hobbies(self):
+        browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
+
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
                                     current_address, state_and_city):
         browser.element('Table').all('td').even.should(
