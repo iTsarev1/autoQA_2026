@@ -18,7 +18,7 @@ def test_student_registration_form():
     # вставить email в строку
     registration_form.fill_email()
     # выбрать пол
-    browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
+    registration_form.choose_female()
     browser.element('#userNumber').type('1234567891')
     registration_form.fill_birthday('1999', 'May', '11')
 

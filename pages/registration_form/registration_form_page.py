@@ -31,3 +31,7 @@ class RegistrationForm:
 
     def fill_email(self):
         browser.element('#userEmail').type('name@example.com')
+
+
+    def choose_female(self):
+        browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
