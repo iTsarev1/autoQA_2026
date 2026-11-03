@@ -6,6 +6,9 @@ from models import resource
 
 class RegistrationForm:
 
+    def __init__(self):
+        self.uploadPicture = browser.element('#uploadPicture')
+
     def open(self):
         browser.open('https://demoqa.com/automation-practice-form')
         browser.all('[id^=google_ads][id$=container__]').with_(timeout=1).wait_until(have.size_greater_than_or_equal(3))
@@ -39,7 +42,7 @@ class RegistrationForm:
         browser.all('#hobbies-checkbox-2').element_by(have.value(value)).click()
 
     def choose_picture(self, value):
-        browser.element('#uploadPicture').perform(command.js.scroll_into_view)
+        self.uploadPicture.perform(command.js.scroll_into_view)
         browser.element('#uploadPicture').set_value(resource.path(value))
 
     def fill_current_address(self, value):
