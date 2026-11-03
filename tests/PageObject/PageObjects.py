@@ -24,7 +24,7 @@ def test_student_registration_form():
     # вставить хобби в строку
     registration_form.choose_hobbies('2')
     # выбрать файл
-    registration_form.choose_picture()
+    registration_form.choose_picture('foto.jpg')
     # вставить адрес в строку
     registration_form.fill_current_address()
     # выбрать штат и город

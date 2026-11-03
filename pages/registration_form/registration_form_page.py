@@ -38,8 +38,9 @@ class RegistrationForm:
     def choose_hobbies(self, value):
         browser.all('#hobbies-checkbox-2').element_by(have.value(value)).click()
 
-    def choose_picture(self):
-        browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
+    def choose_picture(self, value):
+        browser.element('#uploadPicture').perform(command.js.scroll_into_view)
+        browser.element('#uploadPicture').set_value(resource.path(value))
 
     def fill_current_address(self):
         browser.element('#currentAddress').perform(command.js.scroll_into_view)
