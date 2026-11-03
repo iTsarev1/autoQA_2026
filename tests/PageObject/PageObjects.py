@@ -20,7 +20,7 @@ def test_student_registration_form():
     # выбрать дату рождения
     registration_form.fill_birthday('1999', 'May', '11')
     # вставить предметы в строку
-    registration_form.fill_subjects()
+    registration_form.fill_subjects('Computer Science')
     # вставить хобби в строку
     registration_form.choose_hobbies()
     # выбрать файл

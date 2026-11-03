@@ -32,8 +32,8 @@ class RegistrationForm:
         browser.element('.react-datepicker__year-select').type(year)
         browser.element(f'.react-datepicker__day--0{day}:not(.react-datepicker__day--outside-month)').click()
 
-    def fill_subjects(self):
-        browser.element('#subjectsInput').type('Computer Science').press_enter()
+    def fill_subjects(self, value):
+        browser.element('#subjectsInput').type(value).press_enter()
 
     def choose_hobbies(self):
         browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
