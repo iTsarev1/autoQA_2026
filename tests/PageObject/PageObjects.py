@@ -16,7 +16,7 @@ def test_student_registration_form():
     # выбрать пол
     registration_form.choose_gender('Female')
     # вставить номер телефона в строку
-    registration_form.fill_number()
+    registration_form.fill_number('1234567891')
     # выбрать дату рождения
     registration_form.fill_birthday('1999', 'May', '11')
     # вставить предметы в строку

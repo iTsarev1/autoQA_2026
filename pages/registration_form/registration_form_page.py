@@ -23,8 +23,8 @@ class RegistrationForm:
     def choose_gender(self, value):
         browser.all('[name=gender]').element_by(have.value(value)).element('..').click()
 
-    def fill_number(self):
-        browser.element('#userNumber').type('1234567891')
+    def fill_number(self, value):
+        browser.element('#userNumber').type(value)
 
     def fill_birthday(self, year, month, day):
         browser.element('#dateOfBirthInput').click()
