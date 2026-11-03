@@ -8,6 +8,7 @@ class RegistrationForm:
 
     def __init__(self):
         self.uploadPicture = browser.element('#uploadPicture')
+        self.currentAddress = browser.element('#currentAddress')
 
     def open(self):
         browser.open('https://demoqa.com/automation-practice-form')
@@ -46,8 +47,8 @@ class RegistrationForm:
         self.uploadPicture.set_value(resource.path(value))
 
     def fill_current_address(self, value):
-        browser.element('#currentAddress').perform(command.js.scroll_into_view)
-        browser.element('#currentAddress').type(value)
+        self.currentAddress.perform(command.js.scroll_into_view)
+        self.currentAddress.type(value)
 
     def choose_state_and_city(self, state, city):
         browser.element('#state').perform(command.js.scroll_into_view)
