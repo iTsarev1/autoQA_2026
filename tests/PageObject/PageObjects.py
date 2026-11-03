@@ -22,7 +22,7 @@ def test_student_registration_form():
     # вставить предметы в строку
     registration_form.fill_subjects('Computer Science')
     # вставить хобби в строку
-    registration_form.choose_hobbies()
+    registration_form.choose_hobbies('2')
     # выбрать файл
     registration_form.choose_picture()
     # вставить адрес в строку

@@ -35,8 +35,8 @@ class RegistrationForm:
     def fill_subjects(self, value):
         browser.element('#subjectsInput').type(value).press_enter()
 
-    def choose_hobbies(self):
-        browser.all('#hobbies-checkbox-2').element_by(have.value('2')).click()
+    def choose_hobbies(self, value):
+        browser.all('#hobbies-checkbox-2').element_by(have.value(value)).click()
 
     def choose_picture(self):
         browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
