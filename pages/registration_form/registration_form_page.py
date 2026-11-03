@@ -43,7 +43,7 @@ class RegistrationForm:
 
     def choose_picture(self, value):
         self.uploadPicture.perform(command.js.scroll_into_view)
-        browser.element('#uploadPicture').set_value(resource.path(value))
+        self.uploadPicture.set_value(resource.path(value))
 
     def fill_current_address(self, value):
         browser.element('#currentAddress').perform(command.js.scroll_into_view)
