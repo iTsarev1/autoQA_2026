@@ -26,7 +26,7 @@ def test_student_registration_form():
     # выбрать файл
     registration_form.choose_picture('foto.jpg')
     # вставить адрес в строку
-    registration_form.fill_current_address()
+    registration_form.fill_current_address('Moscowskaya Street 18')
     # выбрать штат и город
     registration_form.choose_state_and_city()
 
