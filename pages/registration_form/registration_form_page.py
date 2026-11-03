@@ -42,6 +42,7 @@ class RegistrationForm:
         browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
 
     def fill_current_address(self):
+        browser.element('#currentAddress').perform(command.js.scroll_into_view)
         browser.element('#currentAddress').type('Moscowskaya Street 18')
 
     def choose_state_and_city(self):
