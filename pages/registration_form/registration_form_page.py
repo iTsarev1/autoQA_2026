@@ -17,11 +17,11 @@ class RegistrationForm:
     def fill_last_name(self, value):
         browser.element('#lastName').type(value)
 
-    def fill_email(self):
-        browser.element('#userEmail').type('name@example.com')
+    def fill_email(self, value):
+        browser.element('#userEmail').type(value)
 
-    def choose_female(self):
-        browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
+    def choose_gender(self, value):
+        browser.all('[name=gender]').element_by(have.value(value)).element('..').click()
 
     def fill_number(self):
         browser.element('#userNumber').type('1234567891')

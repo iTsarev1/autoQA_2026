@@ -12,9 +12,9 @@ def test_student_registration_form():
     # вставить фамилию в строку
     registration_form.fill_last_name('YA')
     # вставить email в строку
-    registration_form.fill_email()
+    registration_form.fill_email('name@example.com')
     # выбрать пол
-    registration_form.choose_female()
+    registration_form.choose_gender('Female')
     # вставить номер телефона в строку
     registration_form.fill_number()
     # выбрать дату рождения
