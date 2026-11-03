@@ -28,7 +28,7 @@ def test_student_registration_form():
     # вставить адрес в строку
     registration_form.fill_current_address('Moscowskaya Street 18')
     # выбрать штат и город
-    registration_form.choose_state_and_city()
+    registration_form.choose_state_and_city('NCR', 'Delhi')
 
     # пользователь должен зарегистрироваться со следующими данными
     registration_form.should_registered_user_with(

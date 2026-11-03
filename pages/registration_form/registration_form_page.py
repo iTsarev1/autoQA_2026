@@ -46,12 +46,12 @@ class RegistrationForm:
         browser.element('#currentAddress').perform(command.js.scroll_into_view)
         browser.element('#currentAddress').type(value)
 
-    def choose_state_and_city(self):
+    def choose_state_and_city(self, state, city):
         browser.element('#state').perform(command.js.scroll_into_view)
         browser.element('#state').click()
-        browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('NCR')).click()
+        browser.all('[id^=react-select][id*=option]').element_by(have.exact_text(state)).click()
         browser.element('#city').click()
-        browser.all('[id^=react-select][id*=option]').element_by(have.exact_text('Delhi')).click()
+        browser.all('[id^=react-select][id*=option]').element_by(have.exact_text(city)).click()
         browser.element('#submit').perform(command.js.click)
 
     def should_registered_user_with(self, full_name, user_email, gender, user_number, birthday, subjects, hobbies, upload_picture,
