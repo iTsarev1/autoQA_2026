@@ -9,6 +9,7 @@ class RegistrationForm:
     def __init__(self):
         self.uploadPicture = browser.element('#uploadPicture')
         self.currentAddress = browser.element('#currentAddress')
+        self.state = browser.element('#state')
 
     def open(self):
         browser.open('https://demoqa.com/automation-practice-form')
@@ -51,8 +52,8 @@ class RegistrationForm:
         self.currentAddress.type(value)
 
     def choose_state_and_city(self, state, city):
-        browser.element('#state').perform(command.js.scroll_into_view)
-        browser.element('#state').click()
+        self.state.perform(command.js.scroll_into_view)
+        self.state.click()
         browser.all('[id^=react-select][id*=option]').element_by(have.exact_text(state)).click()
         browser.element('#city').click()
         browser.all('[id^=react-select][id*=option]').element_by(have.exact_text(city)).click()
