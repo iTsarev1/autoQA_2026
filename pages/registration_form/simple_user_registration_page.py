@@ -1,3 +1,9 @@
 
 
 class SimpleUserRegistrationPage:
+    def __init__(self, browser):
+        self.full_name = browser.element('#userName')
+        self.email = browser.element('#userEmail')
+        self.current_address = browser.element('#currentAddress')
+        self.permanent_address = browser.element('#permanentAddress')
+        self.submit = browser.element('#submit')
