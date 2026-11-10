@@ -9,5 +9,8 @@ class SimpleUserRegistrationPage:
         self.permanent_address = browser.element('#permanentAddress')
         self.submit = browser.element('#submit')
 
-    def fill_name(self, value):
+    def fill_full_name(self, value):
         self.full_name.type(value)
+
+    def fill_email(self, value):
+        self.email.fill(value)
