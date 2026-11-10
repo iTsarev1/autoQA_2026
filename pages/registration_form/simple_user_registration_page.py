@@ -14,3 +14,6 @@ class SimpleUserRegistrationPage:
 
     def fill_email(self, value):
         self.email.fill(value)
+
+    def fill_current_address(self, value):
+        self.current_address.fill(value)
