@@ -13,7 +13,10 @@ class SimpleUserRegistrationPage:
         self.full_name.type(value)
 
     def fill_email(self, value):
-        self.email.fill(value)
+        self.email.type(value)
 
     def fill_current_address(self, value):
-        self.current_address.fill(value)
+        self.current_address.type(value)
+
+    def fill_permanent_address(self, value):
+        self.permanent_address.type(value)
