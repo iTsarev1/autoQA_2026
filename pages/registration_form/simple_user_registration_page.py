@@ -7,7 +7,7 @@ class SimpleUserRegistrationPage:
         self.email = browser.element('#userEmail')
         self.current_address = browser.element('#currentAddress')
         self.permanent_address = browser.element('#permanentAddress')
-        self.submit = browser.element('#submit')
+        self.submit_button = browser.element('#submit')
 
     def fill_full_name(self, value):
         self.full_name.type(value)
@@ -20,3 +20,6 @@ class SimpleUserRegistrationPage:
 
     def fill_permanent_address(self, value):
         self.permanent_address.type(value)
+
+    def submit(self):
+        self.submit_button.click()
