@@ -1,4 +1,5 @@
 from selene.support.shared import browser
+from selene import have, command
 
 class SimpleUserRegistrationPage:
 
@@ -11,6 +12,8 @@ class SimpleUserRegistrationPage:
 
     def open(self):
         browser.open('https://demoqa.com/text-box')
+        browser.all('[id^=google_ads][id$=container__]').with_(timeout=1).wait_until(have.size_greater_than_or_equal(3))
+        browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 
     def fill_full_name(self, value):
         self.full_name.type(value)
@@ -19,6 +22,7 @@ class SimpleUserRegistrationPage:
         self.email.type(value)
 
     def fill_current_address(self, value):
+        self.current_address.perform(command.js.scroll_into_view)
         self.current_address.type(value)
 
     def fill_permanent_address(self, value):
