@@ -1,0 +1,2 @@
+from pages.registration_form.simple_user_registration_page import SimpleUserRegistrationPage
+

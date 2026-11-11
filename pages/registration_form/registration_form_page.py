@@ -1,6 +1,5 @@
 from selene import have, command
 from selene.support.shared import browser
-
 from models import resource
 
 
