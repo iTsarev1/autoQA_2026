@@ -9,3 +9,5 @@ def test_registers_user():
     registration_page.fill_current_address('Saratov, Moscovskaya, 1/55, office 6')
     registration_page.fill_permanent_address('Saratov region')
     registration_page.submit()
+
+    registration_page.should_have_submited('Tsarev Ilya Vladimirovich', 'itsarev.111@gmail.com')
