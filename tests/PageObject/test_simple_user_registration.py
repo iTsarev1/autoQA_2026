@@ -12,4 +12,4 @@ def test_registers_user():
     registration_page.fill_permanent_address('Saratov region')
     registration_page.submit()
 
-    registration_page.should_have_submited('Tsarev Ilya Vladimirovich', 'itsarev.111@gmail.com')
+    registration_page.should_have_submited(ilya.full_name, ilya.email)
