@@ -31,5 +31,5 @@ class SimpleUserRegistrationPage:
     def submit(self):
         self.submit_button.click()
 
-    def should_have_submited(self, full_name, email):
+    def should_have_submited(self, full_name, email, current_address, permanent_address):
         pass
