@@ -3,7 +3,7 @@ from pages.registration_form.simple_user_registration_page import SimpleUserRegi
 
 def test_registers_user():
     registration_page = SimpleUserRegistrationPage()
-    ilya = User(full_name = 'Tsarev Ilya Vladimirovich', email = 'itsarev.111@gmail.com')
+    # ilya = User(full_name = 'Tsarev Ilya Vladimirovich', email = 'itsarev.111@gmail.com')
 
     registration_page.open()
     registration_page.fill_full_name(ilya.full_name)
