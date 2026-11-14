@@ -1,7 +1,5 @@
 # Объектно-ориентированная парадигма для построения модели для тестов
-
 from pages.registration_form.registration_form_page import RegistrationForm
-
 
 def test_student_registration_form():
     registration_form = RegistrationForm()
