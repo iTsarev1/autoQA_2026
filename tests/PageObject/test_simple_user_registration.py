@@ -3,7 +3,6 @@ from pages.registration_form.simple_user_registration_page import SimpleUserRegi
 
 def test_registers_user():
     registration_page = SimpleUserRegistrationPage()
-    # ilya = User(full_name = 'Tsarev Ilya Vladimirovich', email = 'itsarev.111@gmail.com')
     admin = users.admin # чтобы было рядом, и было понятно, что откуда импортируется. чтобы не скролить вверх при длинном коде
 
     registration_page.open()
