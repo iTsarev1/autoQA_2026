@@ -3,7 +3,7 @@ import random
 values = ["камень", "ножницы", "бумага"]
 player = input("Вы показали: ").lower() # добавил .lower(), чтобы можно было вводить любой литерал и код не падал
 if player not in values:
-    print(f'Введенное Вами значение {player} не корректно. Разрешенные значения: камень, ножницы, бумага')
+    print(f'Значение {player} не корректно, допустимы: {values[0]}, {values[1]}, {values[2]}')
 else:
     bot = random.choice(values)
     print(f'Компьютер показал: {bot}')
