@@ -8,7 +8,7 @@ def test_steps():
         browser.open("https://github.com")
     with allure.step("Ищем репозиторий"):
         browser.element("button[type='button'][aria-label='Search or jump to, type / to search']").click()
-        browser.element("button[type='text'][aria-label='Search or jump to']").type("eroshenkoam/allure-example")
-        s(".header-search-input").submit()
+        browser.element("input[type='text'][aria-label='Search or jump to']").type("eroshenkoam/allure-example").press_enter()
+        # s(".header-search-input").submit()
     with allure.step("Переходим по ссылке репозитория"):
-        s(by.link_text("eroshenkoam/allure-example")).click()
+        browser.element(by.link_text("eroshenkoam/allure-example")).click()
